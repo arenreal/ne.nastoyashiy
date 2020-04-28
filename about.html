@@ -112,7 +112,60 @@
                 </nav> <!-- end header__nav-wrap -->
 
             </div> <!-- header-content -->
+
+            <div id="secondary_bar">
+                <div class="header__logo">
+                    <a class="logo" href="index.html">
+                        <h1 class="ne">ne.nastoyashiy</h1>
+                    </a>
+                </div> <!-- end header__logo -->
+
+                <ul class="header__social">
+                    <li>
+                        <a href="https://vk.com/ne.nastoyashiy"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/nnbuisness/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                </ul> <!-- end header__social -->
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <ul class="header__nav">
+                        <li><a href="index.html" title="">Home</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                        <li class="current"><a href="about.html" title="">About</a></li>
+                        <li><a href="#" title="">Login/Registration</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+               </div>
+
         </header> <!-- header -->
+
+        
 
     </div> <!-- end s-pageheader -->
 
@@ -384,6 +437,15 @@
     });
 });
 </script>
+<script>
+    jQuery(function (f) {
+        f(window).scroll(function () {
+            f('#secondary_bar')[
+                (f(this).scrollTop() > 120 ? "add" : "remove") + "Class"
+                ]("bar_fixed");
+        });
+    });
+    </script>
 
 </body>
 
