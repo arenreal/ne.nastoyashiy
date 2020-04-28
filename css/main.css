@@ -2729,6 +2729,7 @@ html.no-csstransitions .featured {
    .featured__column {
       float: none;
       width: 100%;
+      margin-bottom: 20px;
    }
 
    .featured__column--big .entry {
