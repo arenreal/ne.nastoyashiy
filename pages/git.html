@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Git</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+     <style type="text/css" media="screen">
+        .s-styles { 
+            background: #f2f2f2;
+            padding-top: 12rem;
+            padding-bottom: 12rem;
+            margin: 10px 0px;
+        }
+        .ne{
+            margin-top: 20px;
+        }
+
+        .s-styles .section-intro h1 {
+            margin-top: 0;
+        }
+        @media only screen and (max-width:500px){
+            .ne{
+            margin-top: 30px;
+            font-size: 2rem;
+        }
+
+        }
+     </style> 
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+    <script src="../js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- pageheader
+    ================================================== -->
+    <div class="s-pageheader">
+
+        <header class="header">
+            <div class="header__content row">
+
+                <div class="header__logo">
+                    <a class="logo" href="../index.html">
+                        <h1 class="ne">ne.nastoyashiy</h1>
+                    </a>
+                </div> <!-- end header__logo -->
+
+                <ul class="header__social">
+                    <li>
+                        <a href="../https://vk.com/ne.nastoyashiy"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/nnbuisness/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                </ul> <!-- end header__social -->
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <h2 class="header__nav-heading h6">Site Navigation</h2>
+
+                    
+                      <ul class="header__nav">
+                        <li class="current"><a href="../index.html" title="">Home</a></li>
+                        <li><a href="../contact.html" title="">Contact</a></li>
+                        <li><a href="../about.html" title="">About</a></li>
+                        <li><a href="#" title="">Login/Registration</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+            </div> <!-- header-content -->
+
+            <div id="secondary_bar">
+                <div class="header__logo">
+                    <a class="logo" href="../index.html">
+                        <h1 class="ne">ne.nastoyashiy</h1>
+                    </a>
+                </div> <!-- end header__logo -->
+
+                <ul class="header__social">
+                    <li>
+                        <a href="https://vk.com/ne.nastoyashiy"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/nnbuisness/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </li>
+                </ul> <!-- end header__social -->
+
+                <a class="header__search-trigger" href="#0"></a>
+
+                <div class="header__search">
+
+                    <form role="search" method="get" class="header__search-form" action="#">
+                        <label>
+                            <span class="hide-content">Search for:</span>
+                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
+                        </label>
+                        <input type="submit" class="search-submit" value="Search">
+                    </form>
+        
+                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
+
+                </div>  <!-- end header__search -->
+
+
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
+
+                <nav class="header__nav-wrap">
+
+                    <ul class="header__nav">
+                        <li class="current"><a href="../index.html" title="">Home</a></li>
+                        <li><a href="../contact.html" title="">Contact</a></li>
+                        <li><a href="../about.html" title="">About</a></li>
+                        <li><a href="#" title="">Login/Registration</a></li>
+                    </ul> <!-- end header__nav -->
+
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+
+                </nav> <!-- end header__nav-wrap -->
+
+               </div>
+
+        </header> <!-- header -->
+
+    </div> <!-- end s-pageheader -->
+
+
+    <!-- s-content
+    ================================================== -->
+    <section class="s-content s-content--narrow s-content--no-padding-bottom" style="height: auto;
+    background: linear-gradient(#171717,#d0ced4 20%);">
+
+        <article class="row format-standard">
+
+            <div class="s-content__header col-full">
+                <h1 class="s-content__header-title">
+                    Введение в понятие GIT. Работа с GIT.
+                </h1>
+                <ul class="s-content__header-meta">
+                    <li class="date"> 2020г</li>
+                    <li class="cat">
+                        <a href="#0">03/05 May</a>
+                    </li>
+                </ul>
+            </div> <!-- end s-content__header -->
+    
+            <div class="s-content__media col-full">
+                <div class="s-content__post-thumb">
+                    <img src="../images/imgpages/git/gitlogo-1000.jpg" 
+                         srcset="../images/imgpages/git/gitlogo-2000.jpg 2000w, 
+                                 ../images/imgpages/git/gitlogo-1000.jpg
+                                 1000w, 
+                                 ../images/imgpages/git/gitlogo-500.jpg 500w" 
+                         sizes="(max-width: 2000px) 100vw, 2000px" alt="" >
+                </div>
+            </div> <!-- end s-content__media -->
+
+            <div class="col-six tab-full" style="width: 100%">
+
+                <h3>Git</h3>
+
+                <ul class="disc">
+                    <li>Что такое git?</li>
+                    <li>Для чего он нужен?</li>
+                    <li>Как с ним работать?</li>
+                </ul>
+
+                <p class="drop-cap">Я знаю, что сейчас многие начнут орать – мол, таких статей миллион, что он тут нам хочет рассказать.  Я согласен ,отчасти, с этим  мнением, статей действительно много. Как правило, они либо пытаются охватить чуть больше чем нужно для начала работы(учат присваивать ключи, работать с сетью итд), или же наоборот, недостаточно подробные (отсутствует связь с gitHUB). Поэтому, собственно,  данная статья здесь и появилась.
+                </p>
+
+                <p>Итак, после небольшого вступления, давайте попробуем разобраться в  вопросах озвученных выше и научиться пользоваться гитом.  Для начала разберемся, что же это такое? Git – это распределенная система контроля версиями.  Если простым языком – программа, позволяющая вам контролировать, а именно применять и откатывать, изменения, которые вы производили в проекте. С помощью гита вы можете создавать ветки на своем проекте и производить на них ряд конкретных изменений, которые потом войдут в проект или, не  понадобившись, не навредят, также сможете легко переключаться между ранними и поздними вариантами, вносить и отслеживать изменения.</p>
+                <p>Система позволяет работать большой команде над одним проектом, да и даже, работая вдвоем, будет намного проще производить изменения и решать разногласия и конфликты.  
+                Систем контроля версий много и все они работают по принципу компьютерной игры, где вы можете вернуться к месту сохранения, если что-то пошло не так.
+                GIT является наиболее популярной из таких систем
+                </p>
+                <p>Git был разработан Линусом Торвальдсом, отсюда и название GIT (пер.с .англ.как мерзавец) , свойственное данному разработчику, так как он говорил, что называет все программы в честь себя, а себя считал эгоистичным ублюдком…”Бла бла бла. Давай уже код, зануда”… Ок! Поехали.</p>
+
+                <p class="drop-cap">
+                    Для начала работы нам нужно будет установить GIT на локальную машину. Это можно сделать на официальном сайте программы (<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>).
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-download-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-download-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-download-1000.jpg 1x, ../images/imgpages/git/git-download-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Выбираете версию подходящую для вашего Windows: 32 или 64 разрядную, или же для Mac или Linux. Ставить нужно только полную версию, а не Portable. Установив программу можно начинать знакомство. </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-download2-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-download2-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-download2-1000.jpg 1x, ../images/imgpages/git/git-download2-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p class="drop-cap">
+                Отличие GIT от других программ в том, что у него отсутствует графическая версия. Поэтому,  работа с Git ведётся через командную строку. В разных операционных системах - свои программы для взаимодействия с Git, но начинающим пользователям,  я бы рекомендовал освоить классический подход, а именно работу  через  терминал.
+
+
+                После установки GIT, вам будет доступен его собственный терминал, через который очень удобно работать, также можете использовать стандартную командную строку Windows.
+                После освоения данных методов – можно выбрать удобную оболочку с графическим интерфейсом, подходящую именно вам. Таких,  великое множество.  Я сам пользуюсь обычной командной строкой или терминалом GIT, работа в таких средах лучше помогает понять сам принцип , GIT..
+
+            </p>
+            <p>
+                Для начала давайте разберемся с основными операторами, клавишами и их сочетаниями командной строки. Все разбирать здесь не будем, для этого есть отдельная статья (<a href="https://ab57.ru/cmdlist.html">Справочник команд.</a>), мы же, рассмотрим только те, что нам понадобятся в рамках данной статьи.
+            </p>
+            <h3 class="add-bottom" style="text-align: center;">Клавиши(работают во всех ОС).</h3>
+            <p>
+                <ul>
+               <li> ↑,↓ — стрелки вверх и вниз в командной строке позволяют смотреть предыдущие введенные команды, чтобы 2 раза не набирать.</li>
+               <li>В Windows при закрытии окошка консоли вся история теряется, в других ОС — сохраняется</li>
+                <li>[tab] — автодополняет имена файлов и команды. Если в текущем каталоге есть файл file.txt, ты наберешь fi и нажмешь [tab], то он автодополнит имя файла (или предложит варианты, если таких файлов несколько).</li>
+                <li>[ctrl+c] — прерывает выполнение команды, например, если она долго тупит.</li>
+                <li>Важно: клавиша Esc, как и многие привычные клавиши, не работает в командной строке. Клавиши Ctrl + C, V, X обычно не работают как «копировать/вырезать/вставить» (иногда для вставки можно использовать Shift + Ins). Клавиша Ctrl + Q не работает как «выход».
+                </li>
+                </ul>
+            </p>
+            <h3 class="add-bottom" style="text-align: center;">Команды.</h3>
+            <p>
+                В командной строке, результат выполнения команд часто зависит от того, в каком каталоге, и на каком диске, ты находишься. Также, когда ты указываешь в команде относительное имя файла (без полного пути и имени диска), оно ищется в текущем каталоге. Какой каталог текущий, можно узнать командой  <div class="alert-box alert-box--info hideit">pwd</div> (print working directory), она работает не во всех ОС, и не во всех оболочках. Как правило, если данная команда не применяется на текущей версии ОС, внизу, рядом с курсором, находится подсказка – указывающая на ваше текущее месторасположение.
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/pwd-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/pwd-1000.jpg" 
+                                    srcset="../images/imgpages/git/pwd-1000.jpg 1x, ../images/imgpages/git/pwd-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Чтобы перейти в другой каталог, используют команду
+                <div class="alert-box alert-box--info hideit">cd</div>
+                <ul>
+                    <li>cd /  — перейти в корневой каталог. </li>
+                    <li>cdfiles — переходит в каталог files внутри текущего.
+                    </li>
+                    <li>cd .. — переходит в родительский каталог.</li>
+                    <li>cd ../.. — переходит на 2 уровня выше.</li>
+                </ul>
+                Очистка экрана консоли в windows делается с помощбю команды  (clear screen)
+                <div class="alert-box alert-box--info hideit">cls</div>
+                список файлов в каталоге ожно узнать с помощью команды 
+                <div class="alert-box alert-box--info hideit">ls</div>
+                <ul>
+                    <li>
+                        ls — показать список файлов.
+                    </li>
+                    <li>ls -l — показать файлы с подробностями.</li>
+                </ul>
+                На этом, в принципе, можно закончить, для первоначальной работы нам этого хватит.
+            </p>
+             <p class="drop-cap">
+                 Давайте теперь подробнее разберемся в терминах GIt и его структуре в целом.  Гит представляет собой  дерево с ветками. Основной ствол дерева является главной веткой, называется она master. Эта корневая ветка проекта, к которой примыкают все остальные.  Остальных веток может быть любое количество. Такое дерево позволяет нам, создав ветку на проекте, заниматься разработкой отдельной части проекта, не вмешиваясь в исходный код, проверять и  тестить изменения, и уже потом,  вливать их в ветку master. В этом основная суть GIT. </p>
+
+                <p> С помощью  терминала проверим,  что Git действительно установлен.Откройте терминал и введите команду <div class="alert-box alert-box--success hideit"> git</div> Эта проверка подходит для всех операционных систем. На экране должно появиться краткое описание основных команд GIT. Их-то как раз мы и будем разбирать сегодня. 
+             </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-coman-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-coman-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-coman-1000.jpg 1x, ../images/imgpages/git/git-coman-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+
+        <h3 class="add-bottom" style="text-align: center;">Настройка Git.</h3>
+        <p class="drop-cap">После того как Git появился на компьютере, нужно ввести свои данные, а именно - имя и адрес электронной почты. Ваши действия в Git будут содержать эту информацию.
+        Для этого в терминале  используйте следующую команду, чтобы добавить своё имя:<div class="alert-box alert-box--success hideit"> git config --global user.name "ваше имя"</div>
+        Для добавления почтового адреса вводите: <div class="alert-box alert-box--success hideit"> git config --globaluser.email  “ваш адрес”</div>
+        </p>
+        <p>
+       Обратите внимание, что в командах, указанных выше, есть опция <code>--global</code>. Это значит, что такие данные будут сохранены для всех ваших действий в Git и вводить их больше не надо. Если вы хотите менять эту информацию для разных проектов, то в директории проекта вводите эти же команды, только без опции<code> --global</code>.
+        </p>
+        <p>Теперь можно считать что GIT настроен, но без GITHub он малоинтересен. </p>
+        <h3 class="add-bottom" style="text-align: center;">GitHub.</h3>
+        <p class="drop-cap">GitHub— веб-сервис, который основан на системе Git. Это такая социальная сеть для разработчиков, которая помогает удобно вести коллективную разработку IT-проектов. Здесь можно публиковать и редактировать свой код, комментировать чужие наработки, следить за новостями других пользователей, ну и собственно пользоваться самим GIT. Потому мы пройдем там регистрацию и заведем там свой профиль. Помимо gitHub есть и другие альтернативные веб- сервисы типа GitLab, но в данной статье мы рассмотрим совместную работу именно с GitHub.</p>
+        <p>Перейдем на сайт<a href="https://github.com/"> GitHub.</a></p>
+        <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/github-regist-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/github-regist-1000.jpg" 
+                                    srcset="../images/imgpages/git/github-regist-1000.jpg 1x, ../images/imgpages/git/github-regist-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Здесь все просто – вводим свои данные, подтверждаем почту и бла бла бла, регистрацию, я думаю, все смогут пройти, в противном случае, возможно, стоит задать себе вопрос – А зачем я в это лезу?</p>
+            <p>После создания профиля мы увидим главную страницу, что нам может здесь быть интересно?
+            Да по факту две вещи – создание нового репозитория и список уже имеющихся. Если вы только что прошли регистрацию, то у вас список будет пустым. Давайте сразу же создадим новый репозиторий, он понадобиться нам ниже. Не будем пока глубоко вдаваться что такое репозиторий – это станет ясно чуть ниже, пока просто ассоциируйте это с созданием нового проекта, хотя это не совсем точно. Для создания нового репозитория нажмем на зелененькую кнопку NEW
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/github-newrepositories-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/github-newrepositories-1000.jpg" 
+                                    srcset="../images/imgpages/git/github-newrepositories-1000.jpg 1x, ../images/imgpages/git/github-newrepositories-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>
+                <ul>
+               <li>Введем название проекта, пускай у нас это будет project01</li>
+                <li>Выберем тип репозитория, он может быть как публичным (доступным для всех), так и приватным (доступным вам одному). По умолчанию, он встает на публичный. Мы не будем глубоко вдаваться в эти понятия сейчас, просто выберем публичный.</li>
+                <li> Ставим галочку о создании файла Readme. В общем и целом, это хорошая практика, создавать такой файл и описывать в нем подробности проекта. В нашем же случае, мы создадим его для того, чтобы не создавать пустого репозитория.</li>
+                <li>Ну и собственно подтверждение.</li>
+                </ul>
+
+            </p>
+            <p>
+                Отлично мы создали новый репозиторий с нашим проектом на GITHUB. Позже мы еще вернемся к этому вопросу. Пока оставим эту страницу в браузере открытой и снова перейдем в консоль.<br>
+                Не устали? Щас все будет уже немного сложнее, но как по мне – интереснее. GIT – это волшебник на вашем компьютере, и вы в этом убедитесь.
+
+            </p>
+            <p class="drop-cap">
+                Давайте создадим папку с нашим проектом в системе. Я буду создавать прямо на рабочем столе чтобы не мучиться.  Создав ее, перейдем туда через терминал с помощью команды <code>cd</code>.
+                Посмотрим где мы находимся. Я нахожусь в папке, на один уровень выше рабочего стола, поэтому я поднимусь до рабочего стола и провалюсь в папку с проектом.
+
+            </p>
+             <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/cd-project-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/cd-project-1000.jpg" 
+                                    srcset="../images/imgpages/git/cd-project-1000.jpg 1x, ../images/imgpages/git/cd-project-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Отлично! Создадим в этой папке репозиторий. Для этого нам придется использовать команду:
+                     <div class="alert-box alert-box--success hideit">git init</div>.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-init-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-init-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-init-1000.jpg 1x, ../images/imgpages/git/git-init-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Система даст нам ответ, о том, что был создан файл репозитория <code> .git</code>, это скрытый файл, и вы его не увидите, если только у вас не настроен показ скрытых файлов, это довольно легко можно сделать с помощью настроек проводника. </p>
+                <p>
+                    Что мы только что сделали ?– мы создали репозиторий с основной веткой внутри<code> master</code>. Теперь GIT будет отслеживать все изменения и запоминать их.Изменения ,на данный момент, будут касаться только нашей ветки <code>master</code>,  так как она, пока что, единственная, мы коснемся этого вопроса чуть подробнее позже, пока достаточно знать лишь то, что в нашей папке проекта создан репозиторий.
+                </p>
+                <p>Введем главную команду
+                    <div class="alert-box alert-box--success hideit"> git status</div>
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-status01-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-status01-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-status01-1000.jpg 1x, ../images/imgpages/git/git-status01-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Система даст нам ответ о том, что мы находимся на ветке <code>master</code>, новых <code>commit</code> нет, и никаких изменений на ней - не замечено, попробуем это исправить. Для этого создадим в папке нашего проекта файл. Например, <code>index.html</code>, и заполним его стандартной формой с одним маленьким параграфом “Привет”.    
+                </p>
+                <blockquote>
+                    Создавать можно любые файлы, картинку например, неважно. Я создаю стандартную разметку для страницы, для того, чтобы пойзже показать как можно разместить свой проект на сервере gitHUB и получить на него прямую ссылку, которой вы сможете делиться c друзьями. И как вы, наверное,  понимаете – картинка для этого не лучший вариант, потому и использую заготовку страницы. Все изменения в коде я делаю в редакторе Sublime Text 3. Как работать с данным редактором я расскажу в другой статье (<a>ссылка</a>)
+                </blockquote>
+                
+
+
+        </article>
+
+        <!-- comments
+        ================================================== -->
+        <div class="comments-wrap">
+
+            <div id="comments" class="row">
+                <div class="col-full">
+
+                    <!-- respond
+                    ================================================== -->
+                    <div class="respond" id="svyz">
+
+                        <h3 class="h2">Add Comment</h3>
+
+                        <form name="contactForm" id="contactForm" method="post" action="">
+                            <fieldset>
+
+                                <div class="form-field">
+                                        <input name="cName" type="text" id="cName" class="full-width" placeholder="Your Name" value="">
+                                </div>
+
+                                <div class="form-field">
+                                        <input name="cEmail" type="text" id="cEmail" class="full-width" placeholder="Your Email" value="">
+                                </div>
+
+                                <div class="form-field">
+                                        <input name="cWebsite" type="text" id="cWebsite" class="full-width" placeholder="Website" value="">
+                                </div>
+
+                                <div class="message form-field">
+                                    <textarea name="cMessage" id="cMessage" class="full-width" placeholder="Your Message"></textarea>
+                                </div>
+
+                                <button type="submit" class="submit btn--primary btn--large full-width">Submit</button>
+
+                            </fieldset>
+                        </form> <!-- end form -->
+
+                    </div> <!-- end respond -->
+
+                </div> <!-- end col-full -->
+
+            </div> <!-- end row comments -->
+        </div> <!-- end comments-wrap -->
+
+    </section> <!-- s-content -->
+</p>
+</div>
+</article>
+</section>
+
+
+    <!-- s-extra
+    ================================================== -->
+    <section class="s-extra" style="background: linear-gradient(#c4c2c8,#0c0c0c 95%);">
+
+        <div class="row top">
+
+            <div class= "col-eight md-six tab-full popular" style="min-width: 100px"> 
+                
+                <h3 style="color: #000000; text-align: center;">Popular Posts</h3>
+
+                <div class= "block-1-2 block-m-full popular__posts" style="background: #b2b0b5;
+    border-radius: 30px 80px/100px;
+    padding-left: 30px;">
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="../images/thumbs/small/html-150.jpg" alt="">
+                        </a>
+                        <h5><a href="#0"><span style="font-weight: 600;">Основные элементы веб страницы. Основы</span> HTML .</a></h5>
+                        <section class="popular__meta">
+                                <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-19">Apr 25, 2020</time></span>
+                        </section>
+                    </article>
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="../images/thumbs/small/css-150.jpg" alt="">
+                        </a>
+                        <h5><a href="#0"><span style="font-weight: 600;">Стили веб страниц. Основы</span> CSS.</a></h5>
+                        <section class="popular__meta">
+                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-18">Apr 25, 2020</time></span>
+                        </section>
+                    </article>
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="../images/thumbs/small/fonts2-150.jpg" alt="">
+                        </a>
+                        <h5><a href="#0">Fonts.</a></h5>
+                        <section class="popular__meta">
+                                <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Apr 25, 2020</time></span>
+                        </section>
+                    </article>
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="../images/thumbs/small/flexbox-150.jpg" alt="">
+                        </a>
+                        <h5><a href="#0"><span style="font-weight: 600;">Основы</span> Flexbox.</a></h5>
+                        <section class="popular__meta">
+                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Apr 25, 2020</time></span>
+                        </section>
+                    </article>
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="../images/thumbs/small/adaptive-150.jpg" alt="">
+                        </a>
+                        <h5><a href="#0"><span style="font-weight: 600;">Верстка под экран. Адаптивность.</span></a></h5>
+                        <section class="popular__meta">
+                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-14">Apr 25, 2020</time></span>
+                        </section>
+                    </article>
+                    <article class="col-block popular__post">
+                        <a href="#0" class="popular__thumb">
+                            <img src="../images/thumbs/small/git-800.svg" alt="">
+                        </a>
+                        <h5><a href="#0"><span style="font-weight: 600;">Введение в понятие</span> GIT. <span style="font-weight: 600;">Работа с</span> GIT.</a></h5>
+                        <section class="popular__meta">
+                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
+                            <span class="popular__date"><span>on</span> <time datetime="2017-12-12">Apr 25, 2020</time></span>
+                        </section>
+                    </article>
+                </div> <!-- end popular_posts -->
+            </div> <!-- end popular -->
+            
+            
+
+        </div> <!-- end row -->
+    </section>
+
+
+    <section class="s-extra" style=" background: linear-gradient(#0c0c0c,#c4c2c8,#171717);">
+        <div class="row bottom tags-wrap">
+            <div class="col-full tags">
+                <h3>Global Tags</h3>
+
+                <div class="tagcloud">
+                    <a href="../index.html#hi">History</a>
+                    <a href="../index.html#sp">sports</a> 
+                    <a href="../index.html#ma">Mathematic</a>
+                    <a href="../index.html#it">It</a> 
+                    <a href="../index.html#ge">Geography</a>
+                    <a href="../index.html#ph">Physics</a>
+                    <a href="../index.html#ch">Chemistry</a>
+                    <a href="../index.html#th">Technics</a>      
+                    <a href="../index.html#ar">ART</a>
+                    <a href="../index.html#la">Language</a>     
+                    <a href="../index.html#li">literature</a>   
+                    <a href="../index.html#bu">Buisness</a>      
+                    <a href="../index.html#fi">finance</a>
+                    <a href="../index.html#bui">Building</a>        
+                </div> <!-- end tagcloud -->
+            </div> <!-- end tags -->
+        </div> <!-- end tags-wrap -->
+    </section> <!-- end s-extra -->
+
+
+    <!-- s-footer
+    ================================================== -->
+   <footer class="s-footer">
+
+        <div class="s-footer__main">
+            <div class="row">
+                
+                <div class="col-two md-four mob-full s-footer__sitelinks">
+                        
+                    <h4>Quick Links</h4>
+
+                    <ul class="s-footer__linklist">
+                        <li id="titul" ><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__sitelinks -->
+
+                <div class="col-two md-four mob-full s-footer__archives">
+                        
+                    <h4>Archives</h4>
+
+                    <ul class="s-footer__linklist">
+                        <li><a href="#0">January 2018</a></li>
+                        <li><a href="#0">December 2017</a></li>
+                        <li><a href="#0">November 2017</a></li>
+                        <li><a href="#0">October 2017</a></li>
+                        <li><a href="#0">September 2017</a></li>
+                        <li><a href="#0">August 2017</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__archives -->
+
+                <div class="col-two md-four mob-full s-footer__social">
+                        
+                    <h4>Social</h4>
+
+                    <ul class="s-footer__linklist">
+                        <li><a href="https://vk.com/ne.nastoyashiy">Vkontakte</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/">YouTube</a></li>
+                        <li><a href="https://keep.google.com/">GoogleKeep</a></li>
+                        <li><a href="https://github.com/">GitHub</a></li>
+                    </ul>
+
+                </div> <!-- end s-footer__social -->
+
+                <div class="col-five md-full end s-footer__subscribe">
+                        
+                    <h4>communication</h4>
+
+                    <p>If you want to contact me - send me your email. When I have some time, I will contact you and you can ask me your questions. Or you can contact me through these social networks.</p>
+
+                    <div class="subscribe-form">
+                        <form id="mc-form" class="group" novalidate="true">
+
+                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                
+                            <input type="submit" name="subscribe" value="Send">
+                
+                            <label for="mc-email" class="subscribe-message"></label>
+                
+                        </form>
+                    </div>
+
+                </div> <!-- end s-footer__subscribe -->
+
+            </div>
+        </div> <!-- end s-footer__main -->
+
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>© Aleksander Knyazev 2020г</span> 
+                    </div>
+
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+
+    </footer> <!-- end s-footer -->
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="../js/main.js"></script>
+
+<script>
+jQuery(function (f) {
+    f(window).scroll(function () {
+        f('#secondary_bar')[
+            (f(this).scrollTop() > 120 ? "add" : "remove") + "Class"
+            ]("bar_fixed");
+    });
+});
+</script>
+</body>
+
+</html>
