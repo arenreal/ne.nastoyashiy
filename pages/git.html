@@ -191,31 +191,219 @@
     
             <div class="s-content__media col-full">
                 <div class="s-content__post-thumb">
-                    <img src="../images/imgpages/gitlogo-1000.jpg" 
-                         srcset="../images/imgpages/gitlogo-2000.jpg 2000w, 
-                                 ../images/imgpages/gitlogo-1000.jpg
+                    <img src="../images/imgpages/git/gitlogo-1000.jpg" 
+                         srcset="../images/imgpages/git/gitlogo-2000.jpg 2000w, 
+                                 ../images/imgpages/git/gitlogo-1000.jpg
                                  1000w, 
-                                 ../images/imgpages/gitlogo-500.jpg 500w" 
+                                 ../images/imgpages/git/gitlogo-500.jpg 500w" 
                          sizes="(max-width: 2000px) 100vw, 2000px" alt="" >
                 </div>
             </div> <!-- end s-content__media -->
 
             <div class="col-six tab-full" style="width: 100%">
 
-                <h3>Drop Caps</h3>
+                <h3>Git</h3>
 
-                <p class="drop-cap">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque.
+                <ul class="disc">
+                    <li>Что такое git?</li>
+                    <li>Для чего он нужен?</li>
+                    <li>Как с ним работать?</li>
+                </ul>
+
+                <p class="drop-cap">Я знаю, что сейчас многие начнут орать – мол, таких статей миллион, что он тут нам хочет рассказать.  Я согласен ,отчасти, с этим  мнением, статей действительно много. Как правило, они либо пытаются охватить чуть больше чем нужно для начала работы(учат присваивать ключи, работать с сетью итд), или же наоборот, недостаточно подробные (отсутствует связь с gitHUB). Поэтому, собственно,  данная статья здесь и появилась.
                 </p>
 
-                <h3>Small Print</h3>
-
-                <p>Buy one widget, get one free!
-                <small>(While supplies last. Offer expires on the vernal equinox. Not valid in Ohio.)</small>
+                <p>Итак, после небольшого вступления, давайте попробуем разобраться в  вопросах озвученных выше и научиться пользоваться гитом.  Для начала разберемся, что же это такое? Git – это распределенная система контроля версиями.  Если простым языком – программа, позволяющая вам контролировать, а именно применять и откатывать, изменения, которые вы производили в проекте. С помощью гита вы можете создавать ветки на своем проекте и производить на них ряд конкретных изменений, которые потом войдут в проект или, не  понадобившись, не навредят, также сможете легко переключаться между ранними и поздними вариантами, вносить и отслеживать изменения.</p>
+                <p>Система позволяет работать большой команде над одним проектом, да и даже, работая вдвоем, будет намного проще производить изменения и решать разногласия и конфликты.  
+                Систем контроля версий много и все они работают по принципу компьютерной игры, где вы можете вернуться к месту сохранения, если что-то пошло не так.
+                GIT является наиболее популярной из таких систем
                 </p>
+                <p>Git был разработан Линусом Торвальдсом, отсюда и название GIT (пер.с .англ.как мерзавец) , свойственное данному разработчику, так как он говорил, что называет все программы в честь себя, а себя считал эгоистичным ублюдком…”Бла бла бла. Давай уже код, зануда”… Ок! Поехали.</p>
 
-            </div>
+                <p class="drop-cap">
+                    Для начала работы нам нужно будет установить GIT на локальную машину. Это можно сделать на официальном сайте программы (<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>).
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-download-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-download-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-download-1000.jpg 1x, ../images/imgpages/git/git-download-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Выбираете версию подходящую для вашего Windows: 32 или 64 разрядную, или же для Mac или Linux. Ставить нужно только полную версию, а не Portable. Установив программу можно начинать знакомство. </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-download2-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-download2-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-download2-1000.jpg 1x, ../images/imgpages/git/git-download2-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p class="drop-cap">
+                Отличие GIT от других программ в том, что у него отсутствует графическая версия. Поэтому,  работа с Git ведётся через командную строку. В разных операционных системах - свои программы для взаимодействия с Git, но начинающим пользователям,  я бы рекомендовал освоить классический подход, а именно работу  через  терминал.
+
+
+                После установки GIT, вам будет доступен его собственный терминал, через который очень удобно работать, также можете использовать стандартную командную строку Windows.
+                После освоения данных методов – можно выбрать удобную оболочку с графическим интерфейсом, подходящую именно вам. Таких,  великое множество.  Я сам пользуюсь обычной командной строкой или терминалом GIT, работа в таких средах лучше помогает понять сам принцип , GIT..
+
+            </p>
+            <p>
+                Для начала давайте разберемся с основными операторами, клавишами и их сочетаниями командной строки. Все разбирать здесь не будем, для этого есть отдельная статья (<a href="https://ab57.ru/cmdlist.html">Справочник команд.</a>), мы же, рассмотрим только те, что нам понадобятся в рамках данной статьи.
+            </p>
+            <h3 class="add-bottom" style="text-align: center;">Клавиши(работают во всех ОС).</h3>
+            <p>
+                <ul>
+               <li> ↑,↓ — стрелки вверх и вниз в командной строке позволяют смотреть предыдущие введенные команды, чтобы 2 раза не набирать.</li>
+               <li>В Windows при закрытии окошка консоли вся история теряется, в других ОС — сохраняется</li>
+                <li>[tab] — автодополняет имена файлов и команды. Если в текущем каталоге есть файл file.txt, ты наберешь fi и нажмешь [tab], то он автодополнит имя файла (или предложит варианты, если таких файлов несколько).</li>
+                <li>[ctrl+c] — прерывает выполнение команды, например, если она долго тупит.</li>
+                <li>Важно: клавиша Esc, как и многие привычные клавиши, не работает в командной строке. Клавиши Ctrl + C, V, X обычно не работают как «копировать/вырезать/вставить» (иногда для вставки можно использовать Shift + Ins). Клавиша Ctrl + Q не работает как «выход».
+                </li>
+                </ul>
+            </p>
+            <h3 class="add-bottom" style="text-align: center;">Команды.</h3>
+            <p>
+                В командной строке, результат выполнения команд часто зависит от того, в каком каталоге, и на каком диске, ты находишься. Также, когда ты указываешь в команде относительное имя файла (без полного пути и имени диска), оно ищется в текущем каталоге. Какой каталог текущий, можно узнать командой  <div class="alert-box alert-box--info hideit">pwd</div> (print working directory), она работает не во всех ОС, и не во всех оболочках. Как правило, если данная команда не применяется на текущей версии ОС, внизу, рядом с курсором, находится подсказка – указывающая на ваше текущее месторасположение.
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/pwd-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/pwd-1000.jpg" 
+                                    srcset="../images/imgpages/git/pwd-1000.jpg 1x, ../images/imgpages/git/pwd-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Чтобы перейти в другой каталог, используют команду
+                <div class="alert-box alert-box--info hideit">cd</div>
+                <ul>
+                    <li>cd /  — перейти в корневой каталог. </li>
+                    <li>cdfiles — переходит в каталог files внутри текущего.
+                    </li>
+                    <li>cd .. — переходит в родительский каталог.</li>
+                    <li>cd ../.. — переходит на 2 уровня выше.</li>
+                </ul>
+                Очистка экрана консоли в windows делается с помощбю команды  (clear screen)
+                <div class="alert-box alert-box--info hideit">cls</div>
+                список файлов в каталоге ожно узнать с помощью команды 
+                <div class="alert-box alert-box--info hideit">ls</div>
+                <ul>
+                    <li>
+                        ls — показать список файлов.
+                    </li>
+                    <li>ls -l — показать файлы с подробностями.</li>
+                </ul>
+                На этом, в принципе, можно закончить, для первоначальной работы нам этого хватит.
+            </p>
+             <p class="drop-cap">
+                 Давайте теперь подробнее разберемся в терминах GIt и его структуре в целом.  Гит представляет собой  дерево с ветками. Основной ствол дерева является главной веткой, называется она master. Эта корневая ветка проекта, к которой примыкают все остальные.  Остальных веток может быть любое количество. Такое дерево позволяет нам, создав ветку на проекте, заниматься разработкой отдельной части проекта, не вмешиваясь в исходный код, проверять и  тестить изменения, и уже потом,  вливать их в ветку master. В этом основная суть GIT. </p>
+
+                <p> С помощью  терминала проверим,  что Git действительно установлен.Откройте терминал и введите команду <div class="alert-box alert-box--success hideit"> git</div> Эта проверка подходит для всех операционных систем. На экране должно появиться краткое описание основных команд GIT. Их-то как раз мы и будем разбирать сегодня. 
+             </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-coman-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-coman-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-coman-1000.jpg 1x, ../images/imgpages/git/git-coman-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+
+        <h3 class="add-bottom" style="text-align: center;">Настройка Git.</h3>
+        <p class="drop-cap">После того как Git появился на компьютере, нужно ввести свои данные, а именно - имя и адрес электронной почты. Ваши действия в Git будут содержать эту информацию.
+        Для этого в терминале  используйте следующую команду, чтобы добавить своё имя:<div class="alert-box alert-box--success hideit"> git config --global user.name "ваше имя"</div>
+        Для добавления почтового адреса вводите: <div class="alert-box alert-box--success hideit"> git config --globaluser.email  “ваш адрес”</div>
+        </p>
+        <p>
+       Обратите внимание, что в командах, указанных выше, есть опция <code>--global</code>. Это значит, что такие данные будут сохранены для всех ваших действий в Git и вводить их больше не надо. Если вы хотите менять эту информацию для разных проектов, то в директории проекта вводите эти же команды, только без опции<code> --global</code>.
+        </p>
+        <p>Теперь можно считать что GIT настроен, но без GITHub он малоинтересен. </p>
+        <h3 class="add-bottom" style="text-align: center;">GitHub.</h3>
+        <p class="drop-cap">GitHub— веб-сервис, который основан на системе Git. Это такая социальная сеть для разработчиков, которая помогает удобно вести коллективную разработку IT-проектов. Здесь можно публиковать и редактировать свой код, комментировать чужие наработки, следить за новостями других пользователей, ну и собственно пользоваться самим GIT. Потому мы пройдем там регистрацию и заведем там свой профиль. Помимо gitHub есть и другие альтернативные веб- сервисы типа GitLab, но в данной статье мы рассмотрим совместную работу именно с GitHub.</p>
+        <p>Перейдем на сайт<a href="https://github.com/"> GitHub.</a></p>
+        <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/github-regist-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/github-regist-1000.jpg" 
+                                    srcset="../images/imgpages/git/github-regist-1000.jpg 1x, ../images/imgpages/git/github-regist-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Здесь все просто – вводим свои данные, подтверждаем почту и бла бла бла, регистрацию, я думаю, все смогут пройти, в противном случае, возможно, стоит задать себе вопрос – А зачем я в это лезу?</p>
+            <p>После создания профиля мы увидим главную страницу, что нам может здесь быть интересно?
+            Да по факту две вещи – создание нового репозитория и список уже имеющихся. Если вы только что прошли регистрацию, то у вас список будет пустым. Давайте сразу же создадим новый репозиторий, он понадобиться нам ниже. Не будем пока глубоко вдаваться что такое репозиторий – это станет ясно чуть ниже, пока просто ассоциируйте это с созданием нового проекта, хотя это не совсем точно. Для создания нового репозитория нажмем на зелененькую кнопку NEW
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/github-newrepositories-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/github-newrepositories-1000.jpg" 
+                                    srcset="../images/imgpages/git/github-newrepositories-1000.jpg 1x, ../images/imgpages/git/github-newrepositories-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>
+                <ul>
+               <li>Введем название проекта, пускай у нас это будет project01</li>
+                <li>Выберем тип репозитория, он может быть как публичным (доступным для всех), так и приватным (доступным вам одному). По умолчанию, он встает на публичный. Мы не будем глубоко вдаваться в эти понятия сейчас, просто выберем публичный.</li>
+                <li> Ставим галочку о создании файла Readme. В общем и целом, это хорошая практика, создавать такой файл и описывать в нем подробности проекта. В нашем же случае, мы создадим его для того, чтобы не создавать пустого репозитория.</li>
+                <li>Ну и собственно подтверждение.</li>
+                </ul>
+
+            </p>
+            <p>
+                Отлично мы создали новый репозиторий с нашим проектом на GITHUB. Позже мы еще вернемся к этому вопросу. Пока оставим эту страницу в браузере открытой и снова перейдем в консоль.<br>
+                Не устали? Щас все будет уже немного сложнее, но как по мне – интереснее. GIT – это волшебник на вашем компьютере, и вы в этом убедитесь.
+
+            </p>
+            <p class="drop-cap">
+                Давайте создадим папку с нашим проектом в системе. Я буду создавать прямо на рабочем столе чтобы не мучиться.  Создав ее, перейдем туда через терминал с помощью команды <code>cd</code>.
+                Посмотрим где мы находимся. Я нахожусь в папке, на один уровень выше рабочего стола, поэтому я поднимусь до рабочего стола и провалюсь в папку с проектом.
+
+            </p>
+             <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/cd-project-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/cd-project-1000.jpg" 
+                                    srcset="../images/imgpages/git/cd-project-1000.jpg 1x, ../images/imgpages/git/cd-project-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Отлично! Создадим в этой папке репозиторий. Для этого нам придется использовать команду:
+                     <div class="alert-box alert-box--success hideit">git init</div>.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-init-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-init-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-init-1000.jpg 1x, ../images/imgpages/git/git-init-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Система даст нам ответ, о том, что был создан файл репозитория <code> .git</code>, это скрытый файл, и вы его не увидите, если только у вас не настроен показ скрытых файлов, это довольно легко можно сделать с помощью настроек проводника. </p>
+                <p>
+                    Что мы только что сделали ?– мы создали репозиторий с основной веткой внутри<code> master</code>. Теперь GIT будет отслеживать все изменения и запоминать их.Изменения ,на данный момент, будут касаться только нашей ветки <code>master</code>,  так как она, пока что, единственная, мы коснемся этого вопроса чуть подробнее позже, пока достаточно знать лишь то, что в нашей папке проекта создан репозиторий.
+                </p>
+                <p>Введем главную команду
+                    <div class="alert-box alert-box--success hideit"> git status</div>
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-status01-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-status01-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-status01-1000.jpg 1x, ../images/imgpages/git/git-status01-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Система даст нам ответ о том, что мы находимся на ветке <code>master</code>, новых <code>commit</code> нет, и никаких изменений на ней - не замечено, попробуем это исправить. Для этого создадим в папке нашего проекта файл. Например, <code>index.html</code>, и заполним его стандартной формой с одним маленьким параграфом “Привет”.    
+                </p>
+                <blockquote>
+                    Создавать можно любые файлы, картинку например, неважно. Я создаю стандартную разметку для страницы, для того, чтобы пойзже показать как можно разместить свой проект на сервере gitHUB и получить на него прямую ссылку, которой вы сможете делиться c друзьями. И как вы, наверное,  понимаете – картинка для этого не лучший вариант, потому и использую заготовку страницы. Все изменения в коде я делаю в редакторе Sublime Text 3. Как работать с данным редактором я расскажу в другой статье (<a>ссылка</a>)
+                </blockquote>
+                
+
+
         </article>
 
         <!-- comments
