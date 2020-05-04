@@ -173,7 +173,7 @@
     <!-- s-content
     ================================================== -->
     <section class="s-content s-content--narrow s-content--no-padding-bottom" style="height: auto;
-    background: linear-gradient(#171717,#d0ced4 20%);">
+    background: linear-gradient(#171717,#d0ced4 2%);">
 
         <article class="row format-standard">
 
@@ -678,6 +678,453 @@
                 <p>Как видите ветка удалена.</p>
 
                 <h3 class="add-bottom" style="text-align: center;">Clone GitHub.</h3>
+                <p class="drop-cap">Все что мы делали выше,  касалось локальных репозиториев на нашем компьютере, давайте теперь коснемся вопроса о том , как клонировать к себе на компьютер удаленный репозиторий с github.<br>
+                Для этого воспользуемся нашим, созданным ранее, репозиторием.<br>
+                Скопируем ссылку для клонирования. Для этого нажмем на зеленую кнопку clone or download.<br>
+                Ссылка скопирована.<br>
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/copy-link-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/copy-link-1000.jpg" 
+                                    srcset="../images/imgpages/git/copy-link-1000.jpg 1x, ../images/imgpages/git/copy-link-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Github предлагает два вида ссылок <mark>https</mark> и <mark>ssh</mark> 
+                Первый является своего рода публичной ссылкой которая доступна для каждого<br>
+                Второй подразумевает под собой использование ключа, который перед этим нужно создавать на терминале,  и добавлять на gitHUB. Это более продвинутый метод и мы не будем рассматривать его в данной статье.<br>
+                Скачав ссылку,  возвращаемся в консоль и копируем себе репозиторий на локальную машину. Для этого используется команда: <div class="alert-box alert-box--success hideit">git clone ссылка</div>
+                
+                <blockquote>!!!Важный момент который упускают многие новички! Каждый репозиторий должен находится в разных папках, не нужно клонировать новый репозиторий в папку с уже имеющимся там, своим, репозиторием. Не забывайте об этом!!!</blockquote>
+                Для того чтобы так не ошибиться, мы перейдем в консоли, на папку выше, с помощью команды <code>cd..</code>
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/cd-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/cd-1000.jpg" 
+                                    srcset="../images/imgpages/git/cd-1000.jpg 1x, ../images/imgpages/git/cd-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Теперь мы находимся на уровень выше, если быть точнее, то мы вышли из папки project01 - обратно на рабочий стол, и здесь мы спокойно можем выполнить клонирование.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-clone-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-clone-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-clone-1000.jpg 1x, ../images/imgpages/git/git-clone-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>...</p>
+                <blockquote>!!Важно. Если туда куда вы клонируете проект, уже есть папка с таким названием, то git выдаст ошибку. Поместите проект в другую папку!!        </blockquote>
+                <p>У меня как раз случилась такая ситуация, поэтому я создал новую папку и склонировал удаленный репозиторий туда.</p>
+                <p>Добавим изменения в наш новый репозиторий.
+                Снова создадим файл <code>index.html</code>
+                И проведем ряд уже знакомых нам процедур <code>git add</code>, <code>git commit</code>, <code>git log</code>.
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/initial-commit-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/initial-commit-1000.jpg" 
+                                    srcset="../images/imgpages/git/initial-commit-1000.jpg 1x, ../images/imgpages/git/initial-commit-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Мы видим, что система показывает нам два commit, хотя мы произвели только один…..????</p>
+                <div style="width: 100%; text-align:center; ">
+                            <img src="../images/imgpages/git/wtf.jpg" 
+                                    srcset="../images/imgpages/git/wtf.jpg 1x, ../images/imgpages/git/wtf.jpg 2x" alt="">
+                    
+                </div>
+                <p>Дело в том , что изначально, занимаясь локальным созданием репозитория, мы создавали папку с проектом , а потом вручную создавали там репозиторий.
+                <code>Clone</code> репозитория с github уже инициализирован и имеет первый, нулевой, инициализирующий <code>comit</code>. Его мы и видим как самый первый, а за ним уже идет, вручную,  нами созданный.
+                Давайте теперь отправим все изменения обратно на сервер gitHUB,  в наш удаленный репозиторий.
+                Для этого нам понадобится команда:
+                 <div class="alert-box alert-box--success hideit">git push</div>.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-push-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-push-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-push-1000.jpg 1x, ../images/imgpages/git/git-push-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>...</p>
+                <blockquote>!!данная команда является одной из самых тяжелых, поэтому некоторое время на экране может ничего не происходить- не пугайтесь. Дождитесь появления сообщения как на картинке – что будет говорить о том, что вы все правильно сделали!!</blockquote>
+                <p>Для того чтобы воочию увидеть изменения, давайте обновим нашу страницу с репозиторием на gitHUB.</p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/new-file-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/new-file-1000.jpg" 
+                                    srcset="../images/imgpages/git/new-file-1000.jpg 1x, ../images/imgpages/git/new-file-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Как видите, все изменения перенеслись туда сами, после <code>push</code>, без каких либо наших действий на самом сайте. Прекрасно!!<br>
+                Теперь давайте посмотрим, сможем ли мы, так просто, перенести изменения,  произошедшие на созданной нами ветки.
+                Используем быстрый метод создания ветки с последующим переходом на нее
+                <code>Git checkout –b название ветки</code>.
+                Создадим там файл <code>index.css</code> и привяжем его ссылкой в <code>index.html</code> (для последующей демонстрации).
+                Произведем <code>commit</code>.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/change branch-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/change branch-1000.jpg" 
+                                    srcset="../images/imgpages/git/change branch-1000.jpg 1x, ../images/imgpages/git/change branch-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/change-file-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/change-file-1000.jpg" 
+                                    srcset="../images/imgpages/git/change-file-1000.jpg 1x, ../images/imgpages/git/change-file-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>...</p>
+                <p>Теперь попробуем выполнить команду <code>git push</code></p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-push2-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-push2-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-push2-1000.jpg 1x, ../images/imgpages/git/git-push2-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Как видите, система выдает нам ошибку, потому как такая команда не подходит в данном случае, так как github понятиея не имеет,  что у нас есть какая-то новая ветка. Чтобы произвести это действие, нужно воспользоваться подсказкой, которую git,  нам сразу же,  выводит на экран.<br>
+                Просто копируем данную команду в консоль и у нас все получается также как с обычным <code>puch</code>
+                </p>
+                <p>Если теперь, мы обновим страницу в браузере, мы увидим,  что у нас уже две ветки, и сервер предлагает нам сразу же произвести <code>pull request</code>.</p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/new-pages-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/new-pages-1000.jpg" 
+                                    srcset="../images/imgpages/git/new-pages-1000.jpg 1x, ../images/imgpages/git/new-pages-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>...</p>
+                <blockquote>!!Если у вас возникает вопрос, почему файл <code>index.css</code> не добавился в удаленный репозиторий и не появился среди остальных файлов, напомню, что мы добавляли их на ветке <mark>oneBranch</mark>, а на gitHub по умолчанию открывается ветка <mark>master</mark>, куда мы еще не <code>merge</code> изменения, этим мы займемся ниже...</blockquote>
+                <p>На этом наша работа с Git из консоли, в рамках этой статьи, закончена.</p>
+        
+                <p class="drop-cap">Теперь поподробнее коснемся самого gitHUB, попробуем провести <code>pull request</code> и выполнить слияние веток внутри gitHUB, а также научимся получать прямую ссылку на наш проект.
+                Как мы увидели, после добавления ветки в репозиторий нам предложили провести <code>pull request</code>.
+                Что это такое? Это запрос к управляющему каким-либо репозиторием (человеку, группе людей или вообще роботу) на применение изменений (из вашего репозитория и/или указанной вами ветки).
+                Для начала создадим его. Способа, в данном случае,  два:</p>
+                <ol>
+                <li>Пройти по предложенной кнопке .</li>
+                <li>Создать новый <code>pull request</code> и добавить ветку на обсуждение.</li>
+            </ol>
+                <p>Воспользуемся вторым, потом у как он показывает, как можно добавить уже очень давнюю ветку, например.</p>
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/two-variant-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/two-variant-1000.jpg" 
+                                    srcset="../images/imgpages/git/two-variant-1000.jpg 1x, ../images/imgpages/git/two-variant-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/pull-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/pull-1000.jpg" 
+                                    srcset="../images/imgpages/git/pull-1000.jpg 1x, ../images/imgpages/git/pull-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Запишем изменения, которые были проведены на ветке и выносятся на <code>pull request</code>.
+                Очень важно вести документацию на проекте, для того чтобы в любой момент времени можно было понять, на каком этапе, что менялось.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/change-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/change-1000.jpg" 
+                                    srcset="../images/imgpages/git/change-1000.jpg 1x, ../images/imgpages/git/change-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Если вы проскролите страницу вниз, то вы увидите какие изменения были на ветке, и какая актуальная версия на той ветке, в которую вы вливаетесь. Также в данном окне можно добавить комментарии по каждому изменению, но на сколько я знаю это уже доступно на платной версии, которой у нормального русского человека никогда нету.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/commet-pull-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/commet-pull-1000.jpg" 
+                                    srcset="../images/imgpages/git/commet-pull-1000.jpg 1x, ../images/imgpages/git/commet-pull-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                    <p>Нажимаем на зеленую кнопку <code>creat pull request</code>, и сохраняем <code>pull request</code>.</p>
+                    <p>
+                    Вносим комментарии касаемо <code>pull request</code>, допустим если их произошло много, то можно внести общий комментарий, затрагивающий целый ряд изменений.
+                    И если нас все устраивает и мы готовы к слиянию то жмем <code>merge pull request</code>.
+                    </p>
+                    <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/merge-request-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/merge-request-1000.jpg" 
+                                    srcset="../images/imgpages/git/merge-request-1000.jpg 1x, ../images/imgpages/git/merge-request-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                    <p>Слияние произошло. Здесь мы видим какие <code>commit</code> вошли в слияние, а также описание того слияния, которое мы производили выше.</p>
+                 <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/merge -commit-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/merge -commit-1000.jpg" 
+                                    srcset="../images/imgpages/git/merge -commit-1000.jpg 1x, ../images/imgpages/git/merge -commit-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>ВСЕ!! Теперь вы можете перейти на главную страницу и увидеть, что все изменения перешли на главную ветку <mark>master</mark>. Я дал подробные пояснения, на фото ниже, какая кнопка за что отвечает, чтобы вы не забывали.</p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/global-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/global-1000.jpg" 
+                                    srcset="../images/imgpages/git/global-1000.jpg 1x, ../images/imgpages/git/global-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p class="drop-cap">Также хотелось немного рассказать о настройках. Именно там можно удалить репозиторий, что иногда нужно, а также получить прямую ссылку на весь проект – чтобы с кем-либо ей поделиться.
+                Давайте посмотрим чуть подробнее.
+                Для начала перейдем с главной страницы в настройки
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/setting-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/setting-1000.jpg" 
+                                    srcset="../images/imgpages/git/setting-1000.jpg 1x, ../images/imgpages/git/setting-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Проскроллим страницу немного вниз до раздела <mark>github pages</mark>.
+                И выберем ветку <code>master</code>.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/setting01-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/setting01-1000.jpg" 
+                                    srcset="../images/imgpages/git/setting01-1000.jpg 1x, ../images/imgpages/git/setting01-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Страница перезагрузится и вам нужно будет снова опуститься на тот же пункт настроек.
+                    Там появиться ссылка. Это и есть та самая ссылка на ваш проект. Вы можете переслать ее партнеру по работе, клиенту для того чтобы у них был доступ к проекту или просто скинуть друзьям для демонстрации своей работы.
+                    </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/link-pages-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/link-pages-1000.jpg" 
+                                    srcset="../images/imgpages/git/link-pages-1000.jpg 1x, ../images/imgpages/git/link-pages-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                Давайте попробуем перейти по ней.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/your-pages-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/your-pages-1000.jpg" 
+                                    srcset="../images/imgpages/git/your-pages-1000.jpg 1x, ../images/imgpages/git/your-pages-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Мы видим визуализацию нашего проекта. Текст с фоном. Так можно реализовать  любой по сложности проект и даже целый сайт.</p>
+                <p>Свой сайт можно загрузить как репозиторий  и заниматься его разработкой, пока вы не найдете настоящий сервер, например на amazon, для его размещения.</p>
+                <blockquote>!!!важно, после установки ветки <code>master</code> в разделе настроек,  и перезагрузки страницы – может пройти какое-то время, прежде чем ссылка станет открываться. Это зависит от общего веса проекта и загруженности серверов gitHUB!!! Не пугайтесь и подождите, какое-то время, ваш проект прогрузится на сервер по ссылке, и она заработает. Также важный фактор о котором многие забывают, ваш проект обязательно должен содержать в корневой папке файл <code>index.html</code>, именно с  таким названием, как правило так именуют главную страницу сайта. Наличие данного файла необходимо, в противном случае, ссылка так и останется неактивной.</blockquote>
+                <p>Таким образом, можно создавать, редактировать, а самое главное демонстрировать, свой проект.</p>
+
+                <p class="drop-cap">Ненужные репозитории лучше удалять.  Для этого, в разделе настроек, нужно пройтись до самого низу страницы. Нажать на кнопку <code>deleted repositoried</code>
+                Скопировать название проекта в поле и подтвердить свое действие.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/deleted-reposit-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/deleted-reposit-1000.jpg" 
+                                    srcset="../images/imgpages/git/deleted-reposit-1000.jpg 1x, ../images/imgpages/git/deleted-reposit-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/deleted-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/deleted-1000.jpg" 
+                                    srcset="../images/imgpages/git/deleted-1000.jpg 1x, ../images/imgpages/git/deleted-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Ввести пароль профиля.</p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/password.jpg" data-lity>
+                            <img src="../images/imgpages/git/password.jpg" 
+                                    srcset="../images/imgpages/git/password.jpg 1x, ../images/imgpages/git/password.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Все! Репозиторий удален. После удаления вас снова отправят на главную страницу профиля.</p>
+                <h3 class="add-bottom" style="text-align: center;">...</h3>
+                <p class="drop-cap">Итак,  давайте подведем итог!
+                В рамках данной статьи мы рассмотрели довольно обширную тему – работа с GIT. Статья получилась обширной, но я очень надеюсь, понятной для вас! Git на первых парах кажется очень сложным, и это логично, так как он не имеет, привычного для нас, интерфейса.  Но я уверяю вас, если вы попробуете самостоятельно выполнить все то, о чем говориться в статье, то у вас очень быстро появиться понимание того, как же он работает. 
+                Если вы хотите заниматься разработкой то вы обязательно, рано или поздно, с ним столкнетесь, и чем раньше это произойдет, тем лучше. 
+                Работа на серверах GitHub также очень важна, поэтому мы коснулись этого вопроса тоже.
+                В принципе, кроме того , что мы здесь разобрали, вам вряд ли что-то еще понадобиться для большинства задач которые будут у Вас появляться, это мое, некое, оправдание того, насколько длинной получилась статья. Мы действительно разобрали все что нужно для начала работы. Если же вам потребуется узнать больше, то вы можете воспользоваться документацией git, которая добросовестно переведена на русский язык <a href="https://git-scm.com/book/ru/v2">https://git-scm.com/book/ru/v2</a>
+                Также, в дальнейшем, я опубликую статью, в которой мы подробно коснемся более сложных моментов git. Для начала работы хватит того что мы разобрали здесь.
+                Внизу я прикрепляю таблицу со всеми командами git и их описанием, которые мы затронули сегодня.</p> 
+                <p>С уважением! Удачи в обучении. 
+                </p>
+
+        <div class="row add-bottom">
+
+            <div class="col-twelve">
+
+                <h3>Tables</h3>
+                <p>Таблица основных команд и определений GIT и GITHub</p>
+
+                <div class="table-responsive">
+
+                    <table>
+                            <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            
+                            <tr>
+                                <td>1</td>
+                                <td>git</td>
+                                <td>вызов git и списка основных скоманд с описанием.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>git status</td>
+                                <td>запрос статуса</td>       
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>git init</td>
+                                <td>создание репозитория</td>       
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>git add .</td>
+                                <td>добавление всех неотслеживаемых файлов</td>       
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>git add index.html</td>
+                                <td>добавление конкретного файла</td>       
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>git commit -m "название коммита"</td>
+                                <td>добавление коммита</td>       
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>git log</td>
+                                <td>просмотр списка коммитов</td>       
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>branch</td>
+                                <td>ветка</td>       
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>master</td>
+                                <td>главная ветка с последней актуальной версией прокта</td>       
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>git branch название ветки</td>
+                                <td>создание ветки</td>       
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>git checkout название ветки</td>
+                                <td>переход на ветку</td>       
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>git checkout master</td>
+                                <td>переход на ветку master</td>       
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>git checkout -b название ветки</td>
+                                <td>создание ветки с последующим на нее переходом </td>       
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>git merge название ветки</td>
+                                <td>слияние ветки</td>       
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>git branch -d название ветки</td>
+                                <td>удаление ветки</td>       
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>git clone ссылка</td>
+                                <td>клонирование репозитория с удаленного сервера на локальную машину </td>       
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>git push</td>
+                                <td>отправление локальных комитов на сервер </td>       
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>pull request</td>
+                                <td>обработка коммитов на вливание</td>       
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>cls</td>
+                                <td>очистка экрана в терминале</td>       
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>cd</td>
+                                <td>переход по дирректории внутри терминала</td>       
+                            </tr>
+                            </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+            
+        </div> <!-- end row -->
+    
+                <div class="s-content__author">
+                    <img src="../images/avatars/user-02.jpg" alt="">
+
+                    <div class="s-content__author-about">
+                        <h4 class="s-content__author-name">
+                            <a href="#0">Aleksandr Knyazev.</a>
+                        </h4>
+                    
+                        <p>Главный редактор.
+                        </p>
+                    </div>
+                </div>
+
+                
+
+
+
+
         </article>
 
         <!-- comments
