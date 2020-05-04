@@ -401,9 +401,283 @@
                 <blockquote>
                     Создавать можно любые файлы, картинку например, неважно. Я создаю стандартную разметку для страницы, для того, чтобы пойзже показать как можно разместить свой проект на сервере gitHUB и получить на него прямую ссылку, которой вы сможете делиться c друзьями. И как вы, наверное,  понимаете – картинка для этого не лучший вариант, потому и использую заготовку страницы. Все изменения в коде я делаю в редакторе Sublime Text 3. Как работать с данным редактором я расскажу в другой статье (<a>ссылка</a>)
                 </blockquote>
-                
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/project01-html-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/project01-html-1000.jpg" 
+                                    srcset="../images/imgpages/git/project01-html-1000.jpg 1x, ../images/imgpages/git/project01-html-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
 
+                <p>В sublime</p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/project01-provodnik-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/project01-provodnik-1000.jpg" 
+                                    srcset="../images/imgpages/git/project01-provodnik-1000.jpg 1x, ../images/imgpages/git/project01-provodnik-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>В проводнике</p>
+                <p>Снова запросим у системы <code>git status</code>. (я буду периодически очищать экран консоли, чтобы вам было понятно,  что мы делаем конкретно на каждом этапе и не путались)</p>
+                 <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-status02-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-status02-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-status02-1000.jpg 1x, ../images/imgpages/git/git-status02-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Мы видим, что система заметила, что у нас добавлен новый файл. Git пока просто следит за этими файлами и за другими изменениями. Если бы мы производили изменения над проектом с большим количеством папок и файлов, то любые изменения, удаление, добавление  любого из них – было бы замечено гитом и добавлено в вышепоказанный список. Такие файлы называются неотслеживаемыми. Давайте добавим их в отслеживаемые файлы, чтобы суметь сохранить изменения. Для этого используется  команда:</p>
+                <div class="alert-box alert-box--success hideit">git add .</div>
+                <p>Команда <code>git add .</code> добавляет ВСЕ неотслеживаемые файлы, если вам нужно добавить только некоторые из них или конкретный, то тогда команда примет такой вид <code>git add название файла.разрешение файла</code>.Пример: 
+                    <div class="alert-box alert-box--success hideit">git add index.html</div>
+                </p>
 
+                <blockquote>важно!! Между <code>add</code> и <code>.</code> есть пробел, не забывайте его ставить, в противном случае система выдаст ошибку!! </blockquote>
+                <p>Введем <code>git add .</code>.
+                    И снова запросим <code>git status</code>.
+                </p>
+                 <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-add-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-add-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-add-1000.jpg 1x, ../images/imgpages/git/git-add-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Мы видим, что цвет и состояние файлов изменились, git добавил наши файлы в отслеживаемые и теперь мы можем сохранить эти изменения.<br>
+                Для этого используется команда:</p>
+
+                <div class="alert-box alert-box--success hideit">git commit –m “ название commit”</div>
+                <blockquote>!!Важно!! Название commit всегда указывается в кавычках.</blockquote>
+
+                <p>Отдельно хотелось бы сказать о правиле ведения <code>commit</code>, в зависимости от того над каким проектом, и с кем,  вы работаете – требования к ведению <code>commit</code> могут сильно отличаться. Где-то требуют вести <code>commit</code> на английском,  где-то на русском, где-то разделять названия на какие-то грейды, и прочее…в зависимости от данных условий, вы будете иметь конкретные инструкции от своей команды. В частных же случаях,  да и вообще, нужно понимать сам смысл и основной принцип правильного ведения <code>commit</code>. Он заключается в нескольких факторах:
+                 <ul>
+                    <li>В первую очередь <code>commit</code> должны быть не слишком короткими и не слишком длинными.</li>
+                    <li><code>Commit</code> должны отражать суть произведенных в них изменений, если добавлен файл – пишите какой файл добавлен, добавлено/изменено свойство – пишите какое, итд.</li>
+                    <li>Касаемо языка, на котором ведется  <code>commit</code>. Я бы рекомендовал приучаться вести commit на английском, потому как, если ваш проект попадет к другому разработчику, из другой страны, то ему будет намного проще разобраться с вашими изменениями, если они записаны на всем известном английском языке. Для примера неудачного ведения<code> commit</code> можно привести моветон китайцев,  которые очень часто называют <code>commit</code> на своем  родном языке – перевод таких изменений то еще веселье.</li>
+                    </ul>
+                    </p>
+                    <p>Вот один из неплохих примеров ведения  <code>commit</code>:</p>
+                    <div class="alert-box alert-box--success hideit">git commit -m "project02-master: add files index.html”</div>
+                    <p>
+                        <ul>
+                            <li>Название проекта –project01</li>
+                            <li>название ветки – master</li>
+                            <li>внесенные изменения – add files index.html</li>
+
+                        </ul>
+                        Такая запись всегда будет всем понятна.<br>
+                        Давайте уже,  наконец,  закомитим наши изменения.
+                    </p>
+                    <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-commit-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-commit-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-commit-1000.jpg 1x, ../images/imgpages/git/git-commit-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Мы видим что система  добавила наш новый файл. Снова запросим <code>git status</code>,  чтобы проверить,  что у нас не осталось как отслеживаемых, так и неотслеживаемых файлов.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-status03-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-status03-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-status03-1000.jpg 1x, ../images/imgpages/git/git-status03-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Мы видим, что система говорит нам, что никаких новых изменений нет. Что же, здорово!<br>
+                Для того чтобы посмотреть весь список commit можно воспользоваться командой:
+                </p>
+                 <div class="alert-box alert-box--success hideit">git log</div>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-log-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-log-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-log-1000.jpg 1x, ../images/imgpages/git/git-log-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Здесь мы увидим все свои <code>commit</code>, названия веток на которых они был произведены и дату со временем . У нас пока только один <code>commit</code> – его мы и видим.<br>
+                Давайте добавим еще два файла в наш проект, например <code>index.css</code> и <code>index.js</code>. <br>
+                В первом зададим: цвет параграфа и его фон, во втором добавим пустую функцию, просто для того чтобы не добавлять пустой файл. 
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/add-files-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/add-files-1000.jpg" 
+                                    srcset="../images/imgpages/git/add-files-1000.jpg 1x, ../images/imgpages/git/add-files-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Запросим <code>git status</code>, убедимся,  что git заметил наши изменения.<br>
+                    Добавим файлы в отслеживаемые с помощью<code> git add .</code>.<br>
+                    И сделаем еще один <code>commit</code> – назовем его <code>proj01-master: add index.css and index.js</code>.<br>
+                    И снова запросим <code>git status</code>.<br>
+                    И посмотрим , что  добавилось в наш список коммитов, с помощью <code>git log</code>.
+
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/add-files2-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/add-files2-1000.jpg" 
+                                    srcset="../images/imgpages/git/add-files2-1000.jpg 1x, ../images/imgpages/git/add-files2-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Как видите, теперь у нас уже два <code>commit</code>.</p>
+                <p>Отлично! Возьмем небольшой подытог:
+                <ul> 
+                    <li>Мы научились создавать репозиторий локально <code>git init</code>.</li>
+                    <li>Добавлять новые файлы в репозиторий .</li>
+                    <li>Отслеживать изменения в репозитории <code> git status</code>.</li>
+                    <li>Добавлять неотслеживаемые файлы в отслеживаемые <code> git add .</code> <code> git add index.html.</code></li>
+                    <li>Делать <code> commit</code> называть его правильно <code> git commit –m “название commit”</code>.</li>
+                    <li>Просматривать список <code>commit</code> <code>git log</code>.</li>
+                </ul>
+                Я надеюсь на этом этапе всем все ясно.<br>
+                Теперь мы можем смело переходить к еще одному важному разделу GIT.
+            </p>
+            <h3 class="add-bottom" style="text-align: center;">Branch (Ветки).</h3>
+            <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/branch-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/branch-1000.jpg" 
+                                    srcset="../images/imgpages/git/branch-1000.jpg 1x, ../images/imgpages/git/branch-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p class="drop-cap">Ветки в git, как я уже говорил, позволяют вносить изменения в проект, не нарушая актуальный код в ветке master. Вообще, вносить какие-то изменения сразу на master, без  создания каких либо веток, признается дурным тоном. В серьезном проекте такого никогда нет, потому как любые изменения сначала проходят <mark>pull requests</mark> и вовсе не всегда вносятся в master.  Лучше сразу привыкать вносить изменения сначала на дополнительную ветку, а потом уже сливать ее вместе с master – и сейчас мы как раз научимся это делать. </p>
+                <p>Давайте создадим ветку. Для этого используется команда:
+                  <div class="alert-box alert-box--success hideit">git branch название ветки</div>. 
+                 Названия веток в отличие от <code>commit</code>, даются без кавычек.  Назовем нашу ветку <mark>oneBranch.</mark></p>
+                  <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/add-branch-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/add-branch-1000.jpg" 
+                                    srcset="../images/imgpages/git/add-branch-1000.jpg 1x, ../images/imgpages/git/add-branch-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>На первый взгляд, кажется, что ничего не произошло, но на самом деле ветка создалась. Просто мы по прежнему находимся на ветке master, потому нам не видно никаких изменений, создалась себе ветка – и создалась.<br>
+                Чтобы убедиться в том, что хоть что-то, да произошло, можно просмотреть все ветки в репозитории. Для этого используется команда:
+                <div class="alert-box alert-box--success hideit">git branch</div>
+                </p>
+                <p>Мы по прежнему находимся на ветке master. Для того чтобы перейти на ветку <mark>oneBranch</mark> нам понадобится команда:
+                 <div class="alert-box alert-box--success hideit">git checkout название ветки</div></p>
+                 <p>Давайте переедем на нашу ветку<br> 
+                    <code>git checkout oneBranch</code>
+                </p>
+                 <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-checkout-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-checkout-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-checkout-1000.jpg 1x, ../images/imgpages/git/git-checkout-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Как видим у нас уже две ветки: <mark>master</mark> и <mark>oneBranch</mark>, и
+                мы перешли с ветки <mark>master</mark> на <mark>oneBranch</mark>.
+                Давайте внесем изменения в файл <code>index.html</code> на нашей новой ветке. Изменим <code>title</code> и добавим в параграф <code>p</code> имя <mark>Лось</mark>.
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/change-index-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/change-index-1000.jpg" 
+                                    srcset="../images/imgpages/git/change-index-1000.jpg 1x, ../images/imgpages/git/change-index-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Запросим <code>git status</code>  и добавим изменения с помощью <code>git add .</code>и <code>git commit</code>.<br>
+                Назовем наш <code>commit</code> <code>prj01-oneBranch: change title index.html</code>.<br>
+                И выведем список <code>commit</code> с помощью команды <code> git log</code>
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up" style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/change-oneBranch-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/change-oneBranch-1000.jpg" 
+                                    srcset="../images/imgpages/git/change-oneBranch-1000.jpg 1x, ../images/imgpages/git/change-oneBranch-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <p>Как видим действия все точно такие же как на ветке master, комит добавлен в общий поток, только теперь там указана другая ветка. Очень информативно, как по мне.
+                А теперь давайте немного побалуемся. Попробуем перейти на ветку master.<br>
+                <code>git checkout master</code>
+
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-checkout master01-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-checkout master01-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-checkout master01-1000.jpg 1x, ../images/imgpages/git/git-checkout master01-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 50%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/index-master-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/index-master-1000.jpg" 
+                                    srcset="../images/imgpages/git/index-master-1000.jpg 1x, ../images/imgpages/git/index-master-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Если мы посмотрим теперь на файл <code>index.html</code><br>
+                То мы увидим, что никаких изменений в нем нету, так как они произошли только на ветке <mark>oneBranch</mark>, и чтобы увидеть их на ветке <mark>master</mark> мы должны сначала влить эту ветку в <mark>master</mark>.
+                </p>
+                <p>Если мы снова переключимся на ветку <mark> oneBranch</mark> то снова увидим те изменения, которые мы внесли. Улавливаете? В чем основной смысл? Git меняет содержимое ваших файлов, в зависимости от того, на какой ветке вы находитесь, без какого либо вашего вмешательства со стороны проводника. Перешли на ветку <mark> oneBranch</mark> – есть изменения, перешли обратно в <mark>master</mark> – нет изменений. Волшебно!!  Вы просто скачиваете проект, создаете ветку, и меняете там хоть все, это не нанесет никакого вреда первоначальному проекту. Главное не забывать на какой ветке вы находитесь (для этого у вас есть <code>git status</code>) и правильно называть все <code>commit</code>, чтобы понимать, что же вы в этот день творили на этой ветке.</p>
+                <blockquote>!!Важно помнить один момент, если изменения, произошедшие на ветки,  не были закомитчены, то при переходе на ветку <mark>master</mark> , они перейдут в эту ветку в виде отслеживаемых или неотслеживаемых (в заисимости от добавления) файлов – автоматом, поэтому не забывайте комитить изменения на ветках, а то вы впадете во фрустрацию, потому как все спутается. </blockquote>
+                <div style="width: 100%; text-align:center; ">
+                            <img src="../images/imgpages/git/commit.jpg" 
+                                    srcset="../images/imgpages/git/commit.jpg 1x, ../images/imgpages/git/commit.jpg 2x" alt="">
+                    
+                </div>
+                <p>Давайте теперь выполним слияние веток, чтобы наши изменения вошли в <mark>master</mark>,  и воспользуемся командой:
+                <div class="alert-box alert-box--success hideit"> git merge название вливаемой ветки</div></p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/git-merge-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/git-merge-1000.jpg" 
+                                    srcset="../images/imgpages/git/git-merge-1000.jpg 1x, ../images/imgpages/git/git-merge-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>
+                Если теперь, находясь на ветке <mark>master</mark>, открыть файл <code>index.html</code> , то мы увидим что теперь там отобразяться все изменения которые мы делали на ветке <mark>oneBranch</mark>.
+                </p>
+                <p>Есть еще один, более быстрый способ создания веток, он позволяет сразу создать ветку и перейти в нее.
+                Для этого используется команда:
+                 <div class="alert-box alert-box--success hideit">git checkout –b название новой ветки</div>
+                </p>
+                <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/checkout-oneBranch-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/checkout-oneBranch-1000.jpg" 
+                                    srcset="../images/imgpages/git/checkout-oneBranch-1000.jpg 1x, ../images/imgpages/git/checkout-oneBranch-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+            <p>Далее весь процесс изменений такой же.</p>
+            <p>Вопрос удалять ветки после слияние или нет, я думаю для каждого свой. Я предпочитаю оставлять ветки, потому как иногда приходиться на них возвращаться, кто-то же наоборот любит подчищать все ветки сразу же после их слияния. Дело каждого.<br>
+            В любом случае давайте познакомимся с командой для удаления веток:
+            <div class="alert-box alert-box--success hideit">git branch –d название удаляемой ветки</div>. Давайте удалим нашу ветку <mark>oneBranch</mark>.
+            </p>
+            <div class="masonry__brick entry format-video" data-aos="fade-up"  style="width: 100%">
+                <div class="entry__thumb video-image">
+                        <a href="../images/imgpages/git/deleted-branch-2000.jpg" data-lity>
+                            <img src="../images/imgpages/git/deleted-branch-1000.jpg" 
+                                    srcset="../images/imgpages/git/deleted-branch-1000.jpg 1x, ../images/imgpages/git/deleted-branch-2000.jpg 2x" alt="">
+                        </a>
+                    </div>
+                </div>
+                <p>Как видите ветка удалена.</p>
+
+                <h3 class="add-bottom" style="text-align: center;">Clone GitHub.</h3>
         </article>
 
         <!-- comments
