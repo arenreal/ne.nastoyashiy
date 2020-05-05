@@ -334,7 +334,7 @@ abbr[title], dfn[title] {
 }
 
 mark {
-   background: #ffd900;
+   background: #ffd90059;
    color: #000000;
 }
 
@@ -4560,6 +4560,16 @@ code{
 }
 }
 .mark2 {
-  background: #30cec6;
+  background: #30cec638;
     color: #000000;
+}
+.code-green {
+   background: #27a142;
+   color: white;
+   font-weight: bolder;
+}
+.code-red{
+   background: #bb1a2b;
+   color: white;
+   font-weight: bolder;
 }
