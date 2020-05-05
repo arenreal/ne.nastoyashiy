@@ -4373,7 +4373,6 @@ p {
    min-width: 100%;
   min-height: 200px;
   display: flex;
-  overflow-x: auto;
 }
 .col-eight{
    min-width: 1200px;
@@ -4394,7 +4393,6 @@ p {
    min-width: 100%;
   min-height: 300px;
   display: flex;
-  overflow-x: auto;
 }  
 /*.card2::-webkit-scrollbar {
   display: none;
@@ -4502,15 +4500,11 @@ code{
 .card2::-webkit-scrollbar-corner { background-color: #999;}
 .card2::-webkit-resizer { background-color: #666;}
 
-.card1{
-   overflow: hidden;
-}
+
 .card1:hover{
    overflow: auto;
 }
-.card2{
-   overflow: hidden;
-}
+
 .card2:hover{
    overflow: auto;
 }
