@@ -4373,6 +4373,7 @@ p {
    min-width: 100%;
   min-height: 200px;
   display: flex;
+  overflow-x: auto;
 }
 .col-eight{
    min-width: 1200px;
@@ -4393,6 +4394,7 @@ p {
    min-width: 100%;
   min-height: 300px;
   display: flex;
+  overflow-x: auto;
 }  
 /*.card2::-webkit-scrollbar {
   display: none;
