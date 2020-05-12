@@ -4387,10 +4387,31 @@ p {
 
 @media only screen and (max-width:500px){
    .col-eight{
+   min-width: 380px;
+   margin-right: 40px;
+}
+   }
+
+   @media only screen and (max-width:375px){
+   .col-eight{
+   min-width: 320px;
+   margin-right: 40px;
+}
+   }
+
+@media only screen and (max-width:320px){
+   .col-eight{
    min-width: 250px;
    margin-right: 40px;
 }
    }
+
+
+
+   
+
+
+
 .card2{
    min-width: 100%;
   min-height: 300px;
