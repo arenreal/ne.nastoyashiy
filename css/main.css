@@ -4411,11 +4411,17 @@ p {
    min-width: 1100px;
    margin-left: 20px;
 }
+#wr{
+   min-width: 1100px;
+}
 }
 @media only screen and (max-width:1100px){
    .s-extra .tags-wrap{
    min-width: 1000px;
    margin-left: 20px;
+}
+#wr{
+   min-width: 1100px;
 }
 }
 
@@ -4424,18 +4430,26 @@ p {
    min-width: 900px;
    margin-left: 20px;
 }
-
+#wr{
+   min-width: 1100px;
+}
 }
 @media only screen and (max-width:900px){
    .s-extra .tags-wrap{
    min-width: 800px;
    margin-left: 20px;
 }
+#wr{
+   min-width: 1100px;
+}
 }
 @media only screen and (max-width:800px){
    .s-extra .tags-wrap{
    min-width: 700px;
   margin-left: 20px;
+}
+#wr{
+   min-width: 1100px;
 }
 .finger{
    display: block;
@@ -4453,6 +4467,9 @@ p {
    min-width: 600px;
    margin-left: 20px;
 }
+#wr{
+   min-width: 1100px;
+}
 code{
    white-space: pre-wrap;
 }
@@ -4463,11 +4480,17 @@ code{
    min-width: 500px;
   margin-left: 20px;
 }
+#wr{
+   min-width: 900px;
+}
 }
 @media only screen and (max-width:500px){
    .s-extra .tags-wrap{
    min-width: 400px;
    margin-left: 20px;
+}
+#wr{
+   min-width: 800px;
 }
 }
 @media only screen and (max-width:400px){
@@ -4475,12 +4498,18 @@ code{
    min-width: 300px;
    margin-left: 20px;
 }
+#wr{
+   min-width: 700px;
+}
 }
 
 @media only screen and (max-width:300px){
    .s-extra .tags-wrap{
    min-width: 250px;
    margin-left: 20px;
+}
+#wr{
+   min-width: 600px;
 }
 }
  
