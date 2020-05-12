@@ -3181,7 +3181,7 @@ html.no-csstransitions .featured {
 
 .s-extra .tagcloud a {
    display: inline-block;
-   font-family: "metropolis-extrabold", sans-serif;
+   font-family: "BalsamiqSans-Bold";
    font-size: 1.3rem;
    line-height: 3.6rem;
    text-transform: uppercase;
@@ -3193,6 +3193,7 @@ html.no-csstransitions .featured {
    text-decoration: none;
    color: #000000;
    position: relative;
+   font-weight: 700;
 }
 
 

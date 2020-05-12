@@ -156,4 +156,11 @@
    font-weight: normal;
 }
 
+@font-face {
+   font-family: "BalsamiqSans-Bold";
+   src: url("../fonts/BalsamiqSans-Bold..ttf") format(".ttf");
+   font-style: normal;
+   font-weight: normal;
+}
+
 /*# sourceMappingURL=fonts.css.map */
