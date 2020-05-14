@@ -4027,6 +4027,13 @@ p.lead {
     font-size: 1.4rem;
     
 }
+
+@media only screen and (max-width:330px) {
+   p.lead {
+    font-size: 1.2rem;
+    
+}
+   }
 p {
    font-size: 1.4rem;
    padding: 5px;
@@ -4423,7 +4430,7 @@ p {
 } */
 .s-extra .tags-wrap{
    min-width: 1300px;
-   margin-right: 80px;
+   
 }
 .finger{
    display: none;
@@ -4431,7 +4438,7 @@ p {
 @media only screen and (max-width:1200px){
    .s-extra .tags-wrap{
    min-width: 1100px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 1100px;
@@ -4440,7 +4447,7 @@ p {
 @media only screen and (max-width:1100px){
    .s-extra .tags-wrap{
    min-width: 1000px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 1100px;
@@ -4450,7 +4457,7 @@ p {
 @media only screen and (max-width:1000px){
    .s-extra .tags-wrap{
    min-width: 900px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 1100px;
@@ -4459,7 +4466,7 @@ p {
 @media only screen and (max-width:900px){
    .s-extra .tags-wrap{
    min-width: 800px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 1100px;
@@ -4468,7 +4475,7 @@ p {
 @media only screen and (max-width:800px){
    .s-extra .tags-wrap{
    min-width: 700px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 #wr{
    min-width: 1100px;
@@ -4487,7 +4494,7 @@ p {
 @media only screen and (max-width:700px){
    .s-extra .tags-wrap{
    min-width: 600px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 1100px;
@@ -4500,7 +4507,7 @@ code{
 @media only screen and (max-width:600px){
    .s-extra .tags-wrap{
    min-width: 500px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 #wr{
    min-width: 900px;
@@ -4509,7 +4516,7 @@ code{
 @media only screen and (max-width:500px){
    .s-extra .tags-wrap{
    min-width: 400px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 800px;
@@ -4518,13 +4525,17 @@ code{
 @media only screen and (max-width:400px){
    .s-extra .tags-wrap{
    min-width: 300px;
-   margin-left: 20px;
+   margin-left: 40px;
 }
 #wr{
    min-width: 700px;
 }
 }
-
+@media only screen and (max-width:350px){
+   .s-extra .tags-wrap{
+   margin-left: 20px;
+}
+}
 @media only screen and (max-width:300px){
    .s-extra .tags-wrap{
    min-width: 250px;
@@ -4638,3 +4649,27 @@ code{
         #report tr.odd td { background:#fff url(../images/row_bkg.png) repeat-x scroll center left; cursor:pointer; }
         #report div.arrow { background:transparent url(../images/arrows.png) no-repeat scroll 0px -16px; width:16px; height:16px; display:block;}
         #report div.up { background-position:0px 0px;}
+
+#wp{
+
+background: -webkit-linear-gradient(#acaaaf,#0c0c0c 10%);
+}
+@media only screen and (max-width:630px) {
+   #wp{
+
+background: -webkit-linear-gradient(#7e7d80,#0c0c0c 10%);
+   }
+}
+@media only screen and (max-width:600px) {
+   #wp{
+
+background: -webkit-linear-gradient(#919094,#0c0c0c 10%);
+   }
+}
+
+@media only screen and (max-width:400px) {
+   #wp{
+
+background: -webkit-linear-gradient(#3b3a3b,#0c0c0c 10%);
+   }
+}
