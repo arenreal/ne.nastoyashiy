@@ -1,577 +1,411 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
     <title>frame - ne.nastoyashiy</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- mobile specific metas
+    <meta content="" name="description">
+    <meta content="" name="author"><!-- mobile specific metas
     ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"><!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/vendor.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/vendor.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <style media="screen" type="text/css">
+           .s-styles { 
+               background: #f2f2f2;
+               padding-top: 12rem;
+               padding-bottom: 12rem;
+               margin: 10px 0px;
+           }
+           .ne{
+               margin-top: 20px;
+           }
 
-    <style type="text/css" media="screen">
-        .s-styles { 
-            background: #f2f2f2;
-            padding-top: 12rem;
-            padding-bottom: 12rem;
-            margin: 10px 0px;
-        }
-        .ne{
-            margin-top: 20px;
-        }
+           .s-styles .section-intro h1 {
+               margin-top: 0;
+           }
+           @media only screen and (max-width:500px){
+               .ne{
+               margin-top: 30px;
+               font-size: 2rem;
+           }
 
-        .s-styles .section-intro h1 {
-            margin-top: 0;
-        }
-        @media only screen and (max-width:500px){
-            .ne{
-            margin-top: 30px;
-            font-size: 2rem;
-        }
-
-        }
-     </style> 
-
-    <!-- script
+           }
+    </style><!-- script
     ================================================== -->
-    <script src="../js/modernizr.js"></script>
-    <script src="../js/pace.min.js"></script>
 
-    <!-- favicons
+    <script src="../js/modernizr.js">
+    </script>
+    <script src="../js/pace.min.js">
+    </script><!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../favicon.ico" type="image/x-icon">
-
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../favicon.ico" rel="icon" type="image/x-icon">
 </head>
-
 <body id="top">
-
     <!-- pageheader
     ================================================== -->
     <div class="s-pageheader">
-
         <header class="header">
             <div class="header__content row">
-
-               <div class="header__logo">
+                <div class="header__logo">
                     <a class="logo" href="../index.html">
-                        <h1 class="ne">ne.nastoyashiy</h1>
-                    </a>
-                </div>  <!-- end header__logo -->
-
+                    <h1 class="ne">ne.nastoyashiy</h1></a>
+                </div><!-- end header__logo -->
                 <ul class="header__social">
                     <li>
-                        <a href="https://vk.com/ne.nastoyashiy"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a href="https://vk.com/ne.nastoyashiy"><i aria-hidden="true" class="fa fa-vk"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/nnbuisness/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/nnbuisness/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
                     </li>
-                </ul> <!-- end header__social -->
-
+                </ul><!-- end header__social -->
                 <a class="header__search-trigger" href="#0"></a>
-
                 <div class="header__search">
-
-                    <form role="search" method="get" class="header__search-form" action="#">
-                        <label>
-                            <span class="hide-content">Search for:</span>
-                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
-                        </label>
-                        <input type="submit" class="search-submit" value="Search">
-                    </form>
-        
-                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
-
-                </div>  <!-- end header__search -->
-
-
+                    <form action="#" class="header__search-form" method="get" role="search">
+                        <label><span class="hide-content">Search for:</span> <input autocomplete="off" class="search-field" name="s" placeholder="Type Keywords" title="Search for:" type="search" value=""></label> <input class="search-submit" type="submit" value="Search">
+                    </form><a class="header__overlay-close" href="#0" title="Close Search">Close</a>
+                </div><!-- end header__search -->
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
-
                 <nav class="header__nav-wrap">
-
                     <h2 class="header__nav-heading h6">Site Navigation</h2>
-
-                      <ul class="header__nav">
-                        <li class="current"><a href="../index.html" title="">Home</a></li>
-                        <li><a href="../contact.html" title="">Contact</a></li>
-                        <li><a href="../about.html" title="">About</a></li>
-                        <li><a href="#1" title="">Login/Registration</a></li>
-                    </ul> <!-- end header__nav -->
-
-                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
-
-                </nav> <!-- end header__nav-wrap -->
-
-            </div> <!-- header-content -->
-
+                    <ul class="header__nav">
+                        <li class="current">
+                            <a href="../index.html" title="">Home</a>
+                        </li>
+                        <li>
+                            <a href="../contact.html" title="">Contact</a>
+                        </li>
+                        <li>
+                            <a href="../about.html" title="">About</a>
+                        </li>
+                        <li>
+                            <a href="#1" title="">Login/Registration</a>
+                        </li>
+                    </ul><!-- end header__nav -->
+                    <a class="header__overlay-close close-mobile-menu" href="#0" title="Close Menu">Close</a>
+                </nav><!-- end header__nav-wrap -->
+            </div><!-- header-content -->
             <div id="secondary_bar">
                 <div class="header__logo">
                     <a class="logo" href="../index.html">
-                        <h1 class="ne">ne.nastoyashiy</h1>
-                    </a>
-                </div> <!-- end header__logo -->
-
+                    <h1 class="ne">ne.nastoyashiy</h1></a>
+                </div><!-- end header__logo -->
                 <ul class="header__social">
                     <li>
-                        <a href="https://vk.com/ne.nastoyashiy"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                        <a href="https://vk.com/ne.nastoyashiy"><i aria-hidden="true" class="fa fa-vk"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/nnbuisness/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/nnbuisness/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
                     </li>
-                </ul> <!-- end header__social -->
-
+                </ul><!-- end header__social -->
                 <a class="header__search-trigger" href="#0"></a>
-
                 <div class="header__search">
-
-                    <form role="search" method="get" class="header__search-form" action="#">
-                        <label>
-                            <span class="hide-content">Search for:</span>
-                            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="Search for:" autocomplete="off">
-                        </label>
-                        <input type="submit" class="search-submit" value="Search">
-                    </form>
-        
-                    <a href="#0" title="Close Search" class="header__overlay-close">Close</a>
-
-                </div>  <!-- end header__search -->
-
-
+                    <form action="#" class="header__search-form" method="get" role="search">
+                        <label><span class="hide-content">Search for:</span> <input autocomplete="off" class="search-field" name="s" placeholder="Type Keywords" title="Search for:" type="search" value=""></label> <input class="search-submit" type="submit" value="Search">
+                    </form><a class="header__overlay-close" href="#0" title="Close Search">Close</a>
+                </div><!-- end header__search -->
                 <a class="header__toggle-menu" href="#0" title="Menu"><span>Menu</span></a>
-
                 <nav class="header__nav-wrap">
-
                     <ul class="header__nav">
-                        <li class="current"><a href="../index.html" title="">Home</a></li>
-                        <li><a href="../contact.html" title="">Contact</a></li>
-                        <li><a href="../about.html" title="">About</a></li>
-                        <li><a href="#" title="">Login/Registration</a></li>
-                    </ul> <!-- end header__nav -->
-
-                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
-
-                </nav> <!-- end header__nav-wrap -->
-
-               </div>
-
-        </header> <!-- header -->
-
-    </div> <!-- end s-pageheader -->
-
-
+                        <li class="current">
+                            <a href="../index.html" title="">Home</a>
+                        </li>
+                        <li>
+                            <a href="../contact.html" title="">Contact</a>
+                        </li>
+                        <li>
+                            <a href="../about.html" title="">About</a>
+                        </li>
+                        <li>
+                            <a href="#" title="">Login/Registration</a>
+                        </li>
+                    </ul><!-- end header__nav -->
+                    <a class="header__overlay-close close-mobile-menu" href="#0" title="Close Menu">Close</a>
+                </nav><!-- end header__nav-wrap -->
+            </div>
+        </header><!-- header -->
+    </div><!-- end s-pageheader -->
     <!-- s-content
     ================================================== -->
     <section class="s-content">
         <div class="row narrow">
             <div class="col-full s-content__header" data-aos="fade-up">
                 <h1 style="color: #ffffff;">Фреймворки.</h1>
-
-                <p style="color: white; " class="lead"> 
-
-                                В данном разделе мы коснемся самых популярных фреймворков, научимся их подключать и работать с ними.
-
-</p>
+                <p class="lead" style="color: white;">В данном разделе мы коснемся самых популярных фреймворков, научимся их подключать и работать с ними.</p>
             </div>
         </div>
-
-         <section class="s-extra" style=" background: linear-gradient(#171717,#c4c2c8,#171717 100%)">
+        <section class="s-extra" style=" background: -webkit-linear-gradient(#171717,#c4c2c8,#171717 100%)">
             <section class="card2">
-        <div class="row bottom tags-wrap">
-            <div class="col-full tags">
-                <h3>Global Tags</h3>
-
-
-                <div id="tag" class="tagcloud"> 
-                    <a href="../index.html#hi">History</a>
-                    <a href="../index.html#sp">sports</a> 
-                    <a href="../index.html#ma">Mathematic</a>
-                    <a href="../it.html">It</a> 
-                    <a href="../index.html#ge">Geography</a>
-                    <a href="../index.html#ph">Physics</a>
-                    <a href="../index.html#ch">Chemistry</a>
-                    <a href="../index.html#th">Technics</a>      
-                    <a href="art-title.html">ART</a>
-                    <a href="../index.html#la">Language</a>     
-                    <a href="../index.html#li">literature</a>   
-                    <a href="../index.html#bu">Buisness</a>      
-                    <a href="../index.html#fi">finance</a>
-                    <a href="../index.html#bui">Building</a>        
-                </div> <!-- end tagcloud -->
-            </div> <!-- end tags -->
-        </div> <!-- end tags-wrap -->
-        <div id="wr" class="row bottom tags-wrap">
-            <div class="col-full tags">
-                <h3>Section Tags</h3>
-
-                <div id="tag" class="tagcloud"> 
-                    <a href="#it">Html5</a>
-                    <a href="#ch">Css</a>
-                    <a href="#ph">js</a> 
-                    <a href="#la">PHP</a>
-                    <a href="#th">C++</a> 
-                    <a href="#bu">C</a>
-                    <a href="#ge">Python</a>             
-                    <a href="#hi">tags html</a>        
-                    <a href="#ma">tags css</a>          
-                    <a href="#ar">Box-Model</a>           
-                    <a href="#sp">FlexBox</a>                
-                    <a href="#li">Bootstrap</a>             
-                    <a href="#fi">Frontend</a>               
-                    <a href="#bui">JQuery</a>
-                     <a href="#it">Backend</a>
-                    <a href="#ch">GIT</a>
-                    <a href="#ph">Fonts</a> 
-                    <a href="#la">pseudo-class</a>
-                    <a href="#th">specifications</a> 
-                    <a href="#bu">hardware</a>
-                    <a href="#ge">PC</a>             
-                    <a href="#hi">Internet</a>        
-                    <a href="#ma">Web</a>          
-                    <a href="#ar">Dom</a>           
-                    <a href="#sp">operators</a>              
-                    <a href="#li">junior</a>             
-                    <a href="#fi">middle</a>               
-                    <a href="#bui">senior</a>             
-                </div> <!-- end tagcloud -->
-            </div> <!-- end tags -->
-        </div> <!-- end tags-wrap -->
-    </section>
-    </section>
-    </section> <!-- end s-extra -->
-    <div style="display: flex;
-    flex-direction: row;
-    justify-content: center;">
-                <span class="finger"><img style=" width: 50px; height: 50px; margin-top: 80px; display: block; position: absolute; top: 500px;" src="../images/icons/png/swipe.png"></span>
-            </div>
-        <div class="row masonry-wrap">
-            <div class="masonry">
-
-                <div class="grid-sizer"></div>
-<div class="fuck">
-                <article class="masonry__brick entry format-standard"  data-aos="fade-up">
-                        
+                <div class="row bottom tags-wrap">
+                    <div class="col-full tags">
+                        <h3>Global Tags</h3>
+                        <div class="tagcloud" id="tag">
+                            <a href="../index.html#hi">History</a> <a href="../index.html#sp">sports</a> <a href="../index.html#ma">Mathematic</a> <a href="../it.html">It &nbsp;</a> <a href="../index.html#ge">Geography</a> <a href="../index.html#ph">Physics</a> <a href="../index.html#ch">Chemistry</a> <a href="../index.html#th">Technics</a> <a href="art-title.html">ART</a> <a href="../index.html#la">Language</a> <a href="../index.html#li">literature</a> <a href="../index.html#bu">Buisness</a> <a href="../index.html#fi">finance</a> <a href="../index.html#bui">Building</a>
+                        </div><!-- end tagcloud -->
+                    </div><!-- end tags -->
+                </div><!-- end tags-wrap -->
+                <div class="row bottom tags-wrap" id="wr">
+                    <div class="col-full tags">
+                        <h3>Section Tags</h3>
+                        <div class="tagcloud" id="tag">
+                            <a href="#it">Html5</a> <a href="#ch">Css</a> <a href="#ph">js &nbsp;</a> <a href="#la">PHP</a> <a href="#th">C++</a> <a href="#bu">C &nbsp;</a> <a href="#ge">Python</a> <a href="#hi">tags html</a> <a href="#ma">tags css</a> <a href="#ar">Box-Model</a> <a href="#sp">FlexBox</a> <a href="#li">Bootstrap</a> <a href="#fi">Frontend</a> <a href="#bui">JQuery</a> <a href="#it">Backend</a> <a href="#ch">GIT</a> <a href="#ph">Fonts</a> <a href="#la">pseudo-class</a> <a href="#th">specifications</a> <a href="#bu">hardware</a> <a href="#ge">PC &nbsp;</a> <a href="#hi">Internet</a> <a href="#ma">Web</a> <a href="#ar">Dom</a> <a href="#sp">operators</a> <a href="#li">junior</a> <a href="#fi">middle</a> <a href="#bui">senior</a>
+                        </div><!-- end tagcloud -->
+                    </div><!-- end tags -->
+                </div><!-- end tags-wrap -->
+            </section>
+        </section><!-- end s-extra -->
+        <div style="display: flex; flex-direction: row; justify-content: center;">
+            <span class="finger"><img src="../images/icons/png/swipe.png" style="width: 50px; height: 50px; background-color: #6e7071; border-radius: 45% 200%;"></span>
+        </div>
+    <div class="row masonry-wrap">
+        <div class="masonry">
+            <div class="grid-sizer"></div>
+                <article class="masonry__brick entry format-standard" data-aos="fade-up">
                     <div class="entry__thumb">
-                        <a href="#1" class="entry__thumb-link">
-                            <img src="../images/imgpages/it/js1.png" 
-                                 srcset="../images/imgpages/it/js1.png 1x, ../images/imgpages/it/js1.png 2x" alt="">
-                        </a>
+                        <a class="entry__thumb-link" href="#1"><img alt="" src="../images/imgpages/it/js1.png" srcset="../images/imgpages/it/js1.png 1x, ../images/imgpages/it/js1.png 2x"></a>
                     </div>
-    
                     <div class="entry__text">
                         <div class="entry__header">
-                            
                             <div class="entry__date">
                                 <a href="#1">April 25, 2020</a>
                             </div>
                             <h1 class="entry__title"><a href="#1"></a></h1>
-                            
                         </div>
                         <div class="entry__excerpt">
-                            <p>
-                                
-                            </p>
+                            <p></p>
                         </div>
                     </div>
-    
-                </article> <!-- end article -->
-</div>
-                <article class="masonry__brick entry format-quote" data-aos="fade-up">
-                        
-                    <div class="entry__thumb">
-                        <blockquote>
-                                <p></p>
-    
-                                <cite></cite>
-                        </blockquote>
-                    </div>   
-    
-                </article> <!-- end article -->
-
-                <article class="masonry__brick entry format-standard">
-                        
-                    <div class="entry__thumb">
-                        <a href="#1" class="entry__thumb-link">
-                            <img src="../images/imgpages/it/js2.png" 
-                                 srcset="../images/imgpages/it/js2.png 1x, ../images/imgpages/it/js2.png 2x" alt="">
-                        </a>
-                    </div>
-    
-                    <div class="entry__text">
-                        <div class="entry__header">
-                            
-                            <div class="entry__date">
-                                <a href="#1">April 25, 2020</a>
-                            </div>
-                            <h1 class="entry__title"><a href="#1">
-                                
-                            </a></h1>
-                            
+                </article><!-- end article -->
+            <article class="masonry__brick entry format-quote" data-aos="fade-up">
+                <div class="entry__thumb">
+                    <blockquote>
+                        <p></p><cite></cite>
+                    </blockquote>
+                </div>
+            </article><!-- end article -->
+            <article class="masonry__brick entry format-standard">
+                <div class="entry__thumb">
+                    <a class="entry__thumb-link" href="#1"><img alt="" src="../images/imgpages/it/js2.png" srcset="../images/imgpages/it/js2.png 1x, ../images/imgpages/it/js2.png 2x"></a>
+                </div>
+                <div class="entry__text">
+                    <div class="entry__header">
+                        <div class="entry__date">
+                            <a href="#1">April 25, 2020</a>
                         </div>
-                        <div class="entry__excerpt">
-                            <p>
-                               
-                            </p>
-                        </div>
+                        <h1 class="entry__title"><a href="#1"></a></h1>
                     </div>
-    
-                </article> <!-- end article -->
-
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="#1" class="entry__thumb-link">
-                            <img src="../images/imgpages/it/jsp.png" 
-                                 srcset="../images/imgpages/it/jsp.png 1x, ../images/imgpages/it/jsp.png 2x" alt="">
-                        </a>
+                    <div class="entry__excerpt">
+                        <p></p>
                     </div>
-    
-                    <div class="entry__text">
-                        <div class="entry__header">
-                            
-                            <div class="entry__date">
-                                <a href="#1">April 25, 2020</a>
-                            </div>
-                            <h1 class="entry__title"><a href="#1">  </a></h1>
-                            
+                </div>
+            </article><!-- end article -->
+            <article class="masonry__brick entry format-standard" data-aos="fade-up">
+                <div class="entry__thumb">
+                    <a class="entry__thumb-link" href="#1"><img alt="" src="../images/imgpages/it/jsp.png" srcset="../images/imgpages/it/jsp.png 1x, ../images/imgpages/it/jsp.png 2x"></a>
+                </div>
+                <div class="entry__text">
+                    <div class="entry__header">
+                        <div class="entry__date">
+                            <a href="#1">April 25, 2020</a>
                         </div>
-                        <div class="entry__excerpt">
-                            <p>
-                             
-                           
-                            </p>
-                        </div>
+                        <h1 class="entry__title"><a href="#1"></a></h1>
                     </div>
-    
-                </article> <!-- end article -->
-
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
-
-                    <div class="entry__thumb">
-                        <a href="#1" class="entry__thumb-link">
-                            <img src="../images/imgpages/it/frame.png" 
-                                 srcset="../images/imgpages/it/frame.png 1x, ../images/imgpages/it/frame.png 2x" alt="">
-                        </a>
+                    <div class="entry__excerpt">
+                        <p></p>
                     </div>
-    
-                    <div class="entry__text">
-                        <div class="entry__header">
-                            
-                            <div class="entry__date">
-                                <a href="#1">April 25, 2020</a>
-                            </div>
-                            <h1 class="entry__title"><a href="#1">  </a></h1>
-                            
+                </div>
+            </article><!-- end article -->
+            <article class="masonry__brick entry format-standard" data-aos="fade-up">
+                <div class="entry__thumb">
+                    <a class="entry__thumb-link" href="#1"><img alt="" src="../images/imgpages/it/frame.png" srcset="../images/imgpages/it/frame.png 1x, ../images/imgpages/it/frame.png 2x"></a>
+                </div>
+                <div class="entry__text">
+                    <div class="entry__header">
+                        <div class="entry__date">
+                            <a href="#1">April 25, 2020</a>
                         </div>
-                        <div class="entry__excerpt">
-                            <p>
-                                   
-
-                                   
-                            </p>
-                        </div>
+                        <h1 class="entry__title"><a href="#1"></a></h1>
                     </div>
-    
-                </article> <!-- end article -->
-
-            </div> <!-- end masonry -->
-        </div> <!-- end masonry-wrap -->
-        <div class="row">
-            <div class="col-full">
-                <nav class="pgn">
-                    <ul>
-                        <li><a class="pgn__prev" href="#1">Prev</a></li>
-                        <li><a class="pgn__num current" href="#1">1</a></li>
-                        <li><span class="pgn__num ">2</span></li>
-                        <li><a class="pgn__num" href="#1">3</a></li>
-                        <li><a class="pgn__num" href="#1">4</a></li>
-                        <li><a class="pgn__num" href="#1">5</a></li>
-                        <li><span class="pgn__num dots">…</span></li>
-                        <li><a class="pgn__num" href="#1">8</a></li>
-                        <li><a class="pgn__next" href="#1">Next</a></li>
-                    </ul>
-                </nav>
-            </div>
+                    <div class="entry__excerpt">
+                        <p></p>
+                    </div>
+                </div>
+            </article><!-- end article -->
+        </div><!-- end masonry -->
+    </div><!-- end masonry-wrap -->
+    <div class="row">
+        <div class="col-full">
+            <nav class="pgn">
+                <ul>
+                    <li>
+                        <a class="pgn__prev" href="#1">Prev</a>
+                    </li>
+                    <li>
+                        <a class="pgn__num current" href="#1">1</a>
+                    </li>
+                    <li><span class="pgn__num">2</span></li>
+                    <li>
+                        <a class="pgn__num" href="#1">3</a>
+                    </li>
+                    <li>
+                        <a class="pgn__num" href="#1">4</a>
+                    </li>
+                    <li>
+                        <a class="pgn__num" href="#1">5</a>
+                    </li>
+                    <li><span class="pgn__num dots">…</span></li>
+                    <li>
+                        <a class="pgn__num" href="#1">8</a>
+                    </li>
+                    <li>
+                        <a class="pgn__next" href="#1">Next</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-
-    </section> <!-- s-content -->
-    
-
+    </div><!-- s-content -->
     <!-- s-extra
     ================================================== -->
     <section class="s-extra" style="background: linear-gradient(#c4c2c8,#0c0c0c 95%);">
-
         <div class="row top">
-
-            <div class= "col-eight md-six tab-full popular" style="min-width: 100px"> 
-                
+            <div class="col-eight md-six tab-full popular" style="min-width: 100px">
                 <h3 style="color: #000000; text-align: center;">Popular Posts</h3>
-
-                <div class= "block-1-2 block-m-full popular__posts" style="background: #b2b0b5;
-    border-radius: 30px 80px/100px;
-    padding-left: 30px;">
+                <div class="block-1-2 block-m-full popular__posts" style="background: #b2b0b5; border-radius: 30px 80px/100px; padding-left: 30px;">
                     <article class="col-block popular__post">
-                        <a href="#0" class="popular__thumb">
-                            <img src="../images/thumbs/small/html-150.jpg" alt="">
-                        </a>
+                        <a class="popular__thumb" href="#0"><img alt="" src="../images/thumbs/small/html-150.jpg"></a>
                         <h5><a href="#0"><span style="font-weight: 600;">Основные элементы веб страницы. Основы</span> HTML .</a></h5>
                         <section class="popular__meta">
-                                <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
-                            <span class="popular__date"><span>on</span> <time datetime="2017-12-19">Apr 25, 2020</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">Aleksandr Knyazev</a></span> <span class="popular__date"><span>on</span> <time datetime="2017-12-19">Apr 25, 2020</time></span>
                         </section>
                     </article>
                     <article class="col-block popular__post">
-                        <a href="#0" class="popular__thumb">
-                            <img src="../images/thumbs/small/css-150.jpg" alt="">
-                        </a>
+                        <a class="popular__thumb" href="#0"><img alt="" src="../images/thumbs/small/css-150.jpg"></a>
                         <h5><a href="#0"><span style="font-weight: 600;">Стили веб страниц. Основы</span> CSS.</a></h5>
                         <section class="popular__meta">
-                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
-                            <span class="popular__date"><span>on</span> <time datetime="2017-12-18">Apr 25, 2020</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">Aleksandr Knyazev</a></span> <span class="popular__date"><span>on</span> <time datetime="2017-12-18">Apr 25, 2020</time></span>
                         </section>
                     </article>
                     <article class="col-block popular__post">
-                        <a href="#0" class="popular__thumb">
-                            <img src="../images/thumbs/small/fonts2-150.jpg" alt="">
-                        </a>
+                        <a class="popular__thumb" href="#0"><img alt="" src="../images/thumbs/small/fonts2-150.jpg"></a>
                         <h5><a href="#0">Fonts.</a></h5>
                         <section class="popular__meta">
-                                <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
-                            <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Apr 25, 2020</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">Aleksandr Knyazev</a></span> <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Apr 25, 2020</time></span>
                         </section>
                     </article>
                     <article class="col-block popular__post">
-                        <a href="#0" class="popular__thumb">
-                            <img src="../images/thumbs/small/flexbox-150.jpg" alt="">
-                        </a>
+                        <a class="popular__thumb" href="#0"><img alt="" src="../images/thumbs/small/flexbox-150.jpg"></a>
                         <h5><a href="#0"><span style="font-weight: 600;">Основы</span> Flexbox.</a></h5>
                         <section class="popular__meta">
-                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
-                            <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Apr 25, 2020</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">Aleksandr Knyazev</a></span> <span class="popular__date"><span>on</span> <time datetime="2017-12-16">Apr 25, 2020</time></span>
                         </section>
                     </article>
                     <article class="col-block popular__post">
-                        <a href="#0" class="popular__thumb">
-                            <img src="../images/thumbs/small/adaptive-150.jpg" alt="">
-                        </a>
+                        <a class="popular__thumb" href="#0"><img alt="" src="../images/thumbs/small/adaptive-150.jpg"></a>
                         <h5><a href="#0"><span style="font-weight: 600;">Верстка под экран. Адаптивность.</span></a></h5>
                         <section class="popular__meta">
-                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
-                            <span class="popular__date"><span>on</span> <time datetime="2017-12-14">Apr 25, 2020</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">Aleksandr Knyazev</a></span> <span class="popular__date"><span>on</span> <time datetime="2017-12-14">Apr 25, 2020</time></span>
                         </section>
                     </article>
                     <article class="col-block popular__post">
-                        <a href="pages/git.html" class="popular__thumb">
-                            <img src="../images/thumbs/small/git-800.svg" alt="">
-                        </a>
+                        <a class="popular__thumb" href="pages/git.html"><img alt="" src="../images/thumbs/small/git-800.svg"></a>
                         <h5><a href="pages/git.html"><span style="font-weight: 600;">Введение в понятие</span> GIT. <span style="font-weight: 600;">Работа с</span> GIT.</a></h5>
                         <section class="popular__meta">
-                            <span class="popular__author"><span>By</span> <a href="#0"> Aleksandr Knyazev</a></span>
-                            <span class="popular__date"><span>on</span> <time datetime="2017-12-12">Apr 25, 2020</time></span>
+                            <span class="popular__author"><span>By</span> <a href="#0">Aleksandr Knyazev</a></span> <span class="popular__date"><span>on</span> <time datetime="2017-12-12">Apr 25, 2020</time></span>
                         </section>
                     </article>
-                </div> <!-- end popular_posts -->
-            </div> <!-- end popular -->
-            
-            
-
-        </div> <!-- end row -->
-    </section>
-
-    <!-- s-footer
+                </div><!-- end popular_posts -->
+            </div><!-- end popular -->
+        </div><!-- end row -->
+    </section><!-- s-footer
     ================================================== -->
-     <footer class="s-footer">
-
+    <footer class="s-footer">
         <div class="s-footer__main">
             <div class="row">
-                
                 <div class="col-two md-four mob-full s-footer__sitelinks">
-                        
                     <h4>Quick Links</h4>
-
                     <ul class="s-footer__linklist">
-                        <li id="titul" ><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
+                        <li id="titul">
+                            <a href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="../about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="../contact.html">Contact</a>
+                        </li>
                     </ul>
-                </div> <!-- end s-footer__sitelinks -->
-
+                </div><!-- end s-footer__sitelinks -->
                 <div class="col-two md-four mob-full s-footer__archives">
-                        
                     <h4>Archives</h4>
-
                     <ul class="s-footer__linklist">
-                        <li><a href="#0">January 2018</a></li>
-                        <li><a href="#0">December 2017</a></li>
-                        <li><a href="#0">November 2017</a></li>
-                        <li><a href="#0">October 2017</a></li>
-                        <li><a href="#0">September 2017</a></li>
-                        <li><a href="#0">August 2017</a></li>
+                        <li>
+                            <a href="#0">January 2018</a>
+                        </li>
+                        <li>
+                            <a href="#0">December 2017</a>
+                        </li>
+                        <li>
+                            <a href="#0">November 2017</a>
+                        </li>
+                        <li>
+                            <a href="#0">October 2017</a>
+                        </li>
+                        <li>
+                            <a href="#0">September 2017</a>
+                        </li>
+                        <li>
+                            <a href="#0">August 2017</a>
+                        </li>
                     </ul>
-
-                </div> <!-- end s-footer__archives -->
-
+                </div><!-- end s-footer__archives -->
                 <div class="col-two md-four mob-full s-footer__social">
-                        
                     <h4>Social</h4>
-
                     <ul class="s-footer__linklist">
-                        <li><a href="https://vk.com/ne.nastoyashiy">Vkontakte</a></li>
-                        <li><a href="https://www.instagram.com/">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/">YouTube</a></li>
-                        <li><a href="https://keep.google.com/">GoogleKeep</a></li>
-                        <li><a href="https://github.com/">GitHub</a></li>
+                        <li>
+                            <a href="https://vk.com/ne.nastoyashiy">Vkontakte</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/">YouTube</a>
+                        </li>
+                        <li>
+                            <a href="https://keep.google.com/">GoogleKeep</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/">GitHub</a>
+                        </li>
                     </ul>
-
-                </div> <!-- end s-footer__social -->
-
+                </div><!-- end s-footer__social -->
                 <div class="col-five md-full end s-footer__subscribe">
-                        
                     <h4>communication</h4>
-
                     <p>If you want to contact me - send me your email. When I have some time, I will contact you and you can ask me your questions. Or you can contact me through these social networks.</p>
-
                     <div class="subscribe-form">
-                        <form id="mc-form" class="group" novalidate="true">
-
-                            <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                
-                            <input type="submit" name="subscribe" value="Send">
-                
-                            <label for="mc-email" class="subscribe-message"></label>
-                
+                        <form class="group" id="mc-form" name="mc-form" novalidate="true">
+                            <input class="email" id="mc-email" name="EMAIL" placeholder="Email Address" required="" type="email" value=""> <input name="subscribe" type="submit" value="Send"> <label class="subscribe-message" for="mc-email"></label>
                         </form>
                     </div>
-
-                </div> <!-- end s-footer__subscribe -->
-
+                </div><!-- end s-footer__subscribe -->
             </div>
-        </div> <!-- end s-footer__main -->
-
+        </div><!-- end s-footer__main -->
         <div class="s-footer__bottom">
             <div class="row">
                 <div class="col-full">
                     <div class="s-footer__copyright">
-                        <span>© Aleksander Knyazev 2020г</span> 
+                        <span>© Aleksander Knyazev 2020г</span>
                     </div>
-
                     <div class="go-top">
-                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                        <a class="smoothscroll" href="#top" title="Back to Top"></a>
                     </div>
                 </div>
             </div>
-        </div> <!-- end s-footer__bottom -->
-
-    </footer> <!-- end s-footer -->
+        </div><!-- end s-footer__bottom -->
+    </footer><!-- end s-footer -->
     <!-- preloader
     ================================================== -->
     <div id="preloader">
@@ -584,24 +418,22 @@
                 <div></div>
             </div>
         </div>
-    </div>
-
-
-    <!-- Java Script
+    </div><!-- Java Script
     ================================================== -->
-    <script src="../js/jquery-3.2.1.min.js"></script>
-    <script src="../js/plugins.js"></script>
-    <script src="../js/main.js"></script>
-
-<script>
-jQuery(function (f) {
-    f(window).scroll(function () {
-        f('#secondary_bar')[
-            (f(this).scrollTop() > 120 ? "add" : "remove") + "Class"
-            ]("bar_fixed");
+    <script src="../js/jquery-3.2.1.min.js">
+    </script> 
+    <script src="../js/plugins.js">
+    </script> 
+    <script src="../js/main.js">
+    </script> 
+    <script>
+    jQuery(function (f) {
+       f(window).scroll(function () {
+           f('#secondary_bar')[
+               (f(this).scrollTop() > 120 ? "add" : "remove") + "Class"
+               ]("bar_fixed");
+       });
     });
-});
-</script>
+    </script>
 </body>
-
 </html>
