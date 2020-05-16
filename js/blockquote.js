@@ -1,4 +1,4 @@
-{const quotes = [
+const quotes = [
     { 
         "quote" : "Учитывая печальное состояние современных компьютерных программ, разработку ПО до сих пор можно считать искусством, а не научной дисциплиной.", 
         "source" : "Bill Clinton" 
@@ -62,6 +62,7 @@
 
 ]
 
+
 function randomQuote() {
   let random = quotes[Math.floor(Math.random() * quotes.length)];
   quotation.innerText = `“${random.quote}.”`;
@@ -69,7 +70,7 @@ function randomQuote() {
 }
 
 
-}
+
 
 randomQuote();
 document.querySelector("#cita").addEventListener('click', randomQuote)
