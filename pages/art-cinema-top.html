@@ -44,8 +44,6 @@
     <link href="../favicon.ico" rel="icon" type="image/x-icon">
 </head>
 <body id="top">
-    <!-- pageheader
-    ================================================== -->
     <div class="s-pageheader">
         <header class="header">
             <div class="header__content row">
@@ -115,9 +113,14 @@
             </div>
         </header><!-- header -->
     </div><!-- end s-pageheader -->
-    <!-- s-content
-    ================================================== -->
-    <section class="s-content">
+    <!-- s-content-->
+    
+    <div class="content">
+
+    </div>
+    <div class="fullscreen-bg">
+        <div class="overlay">
+            <section class="s-content">
         <div class="row narrow">
             <div class="col-full s-content__header">
                 <h1 style="color: #ffffff;">Топ фильмов.</h1>
@@ -147,7 +150,15 @@
         <div class="finger-main">
             <span class="finger"><img src="../images/icons/png/swipe.png"></span>
         </div>
-        <section class="home" id="0">
+    </section>    
+        </div>
+        <video loop muted autoplay poster="../media/video/plane.jpg" class="fullscreen-bg__video">
+            <source src="../media/video/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="fullscreen-bg">
+        <div class="overlay">
+            <section class="home" id="0">
         <section class="s-content">
             <div class="row masonry-wrap">
                 <div class="masonry">
@@ -267,22 +278,25 @@
                         </div>
                     </article><!-- end article -->
 
-                    </div><!-- end masonry -->
-
-
-
-
-
-        
+                    </div><!-- end masonry -->        
             </div><!-- end masonry-wrap -->
         </section><!-- s-content -->
     </section><!-- s-footer-->
 
 
 
-        
-    <!--=============================================== -->
-        <footer class="s-footer">
+         </div>
+        <video loop muted autoplay poster="../media/video/plane.jpg" class="fullscreen-bg__video">
+             <source src="../media/video/video1.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+
+
+
+
+ <footer class="s-footer">
             <div class="s-footer__main">
                 <div class="row">
                     <div class="col-two md-four mob-full s-footer__sitelinks">
@@ -365,10 +379,8 @@
                     </div>
                 </div>
             </div><!-- end s-footer__bottom -->
-        </footer><!-- end s-footer -->
-        <!-- preloader
-    ================================================== -->
-        <div id="preloader">
+        </footer><!-- end s-footer -->   
+<div id="preloader">
             <div id="loader">
                 <div class="line-scale">
                     <div></div>
@@ -378,7 +390,8 @@
                     <div></div>
                 </div>
             </div>
-        </div><!-- Java Script
+        </div>
+    <!-- Java Script
     ================================================== -->
         <script src="../js/jquery-3.2.1.min.js">
         </script> 
@@ -394,6 +407,5 @@
              });
           });
         </script> 
-    </section>
 </body>
 </html>
