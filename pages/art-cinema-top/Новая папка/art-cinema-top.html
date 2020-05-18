@@ -14,6 +14,7 @@
     <link href="css/vendor.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="css/top.css">
+    <link rel="stylesheet" href="css/style.css">
     <style media="screen" type="text/css">
               .s-styles { 
                   background: #f2f2f2;
@@ -115,11 +116,15 @@
     </div><!-- end s-pageheader -->
     <!-- s-content-->
     
-    <div class="content">
+    <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- 
+- Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="video/video1.mp4" type="video/mp4">
 
-    </div>
-    <div class="fullscreen-bg">
-        <div class="overlay">
+</video>
+
+
             <section class="s-content">
         <div class="row narrow">
             <div class="col-full s-content__header">
@@ -150,15 +155,9 @@
         <div class="finger-main">
             <span class="finger"><img src="../images/icons/png/swipe.png"></span>
         </div>
-    </section>    
-        </div>
-        <video loop muted autoplay poster="video/plane.jpg" class="fullscreen-bg__video">
-            <source src="video/video1.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="fullscreen-bg">
-        <div class="overlay">
-            <section class="home" id="0">
+    </section>  
+
+    <section class="home" id="0">
         <section class="s-content">
             <div class="row masonry-wrap">
                 <div class="masonry">
@@ -282,11 +281,7 @@
             </div><!-- end masonry-wrap -->
         </section><!-- s-content -->
     </section><!-- s-footer-->
-        </div>
-        <video loop muted autoplay poster="video/plane.jpg" class="fullscreen-bg__video">
-            <source src="video/video2.mp4" type="video/mp4">
-        </video>
-    </div>
+
  <footer class="s-footer">
             <div class="s-footer__main">
                 <div class="row">
