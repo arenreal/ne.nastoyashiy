@@ -257,27 +257,46 @@ function randomQuote() {
     };
 
 
-   /* Masonry
+   /* Isotope
     * ---------------------------------------------------- */ 
-    var clMasonryFolio = function () {
-        
-        var containerBricks = $('.masonry');
+  
 
-        containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
-                itemSelector: '.masonry__brick',
-                percentPosition: true,
-                resize: true
+// external js: isotope.pkgd.js
 
-            });
-        });
+var $grid = $('.grid').imagesLoaded( function() {
+  // init Isotope after all images have loaded
+  $grid.isotope({
+    itemSelector: '.grid-item',
+  masonry: {
+    columnWidth: 100
+  }
+  });
+});
 
 
-        // layout Masonry after each image loads
-        containerBricks.imagesLoaded().progress( function() {
-            containerBricks.masonry('layout');
-        });
-    };
+
+
+
+$grid.on( 'click', '.grid-item', function() {
+  // change size of item by toggling gigante class
+  $( this ).toggleClass('gigante');
+  $grid.isotope('layout');
+
+});
+
+$grid.on( 'click', '.text-p', function() {
+  // change size of item by toggling gigante class
+  $( this ).toggleClass('text-p-block');
+  $grid.isotope('layout');
+
+});
+$('.text-').click(function() {
+  // change size of item by toggling gigante class
+  $( this ).toggleClass('text-p-block');
+  $grid.isotope('layout');
+});
+
+
 
 
    /* slick slider
@@ -684,7 +703,6 @@ function randomQuote() {
         clPrettyPrint();
         clSearch();
         clMobileMenu();
-        clMasonryFolio();
         clSlickSlider();
         clSmoothScroll();
         clPlaceholder();
